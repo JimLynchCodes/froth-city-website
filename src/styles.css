@@ -1,0 +1,117 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-long: var(--long);
+  --color-short: var(--short);
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.25rem;
+  --background: oklch(0.975 0.008 85);
+  --foreground: oklch(0.2 0.02 255);
+  --card: oklch(0.99 0.005 85);
+  --card-foreground: oklch(0.2 0.02 255);
+  --popover: oklch(0.99 0.005 85);
+  --popover-foreground: oklch(0.2 0.02 255);
+  --primary: oklch(0.24 0.04 255);
+  --primary-foreground: oklch(0.97 0.01 85);
+  --secondary: oklch(0.94 0.012 85);
+  --secondary-foreground: oklch(0.24 0.04 255);
+  --muted: oklch(0.94 0.012 85);
+  --muted-foreground: oklch(0.48 0.02 255);
+  --accent: oklch(0.72 0.13 70);
+  --accent-foreground: oklch(0.2 0.02 255);
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --long: oklch(0.52 0.12 155);
+  --short: oklch(0.55 0.19 27);
+  --ink: oklch(0.18 0.03 255);
+  --ink-foreground: oklch(0.95 0.01 85);
+  --border: oklch(0.87 0.015 85);
+  --input: oklch(0.87 0.015 85);
+  --ring: oklch(0.72 0.13 70);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; letter-spacing: -0.012em; text-wrap: balance; }
+  body { font-size: 15px; line-height: 1.65; }
+  p { text-wrap: pretty; }
+  a, button, summary { -webkit-tap-highlight-color: transparent; }
+  ::selection { background: var(--color-accent); color: var(--color-accent-foreground); }
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+}
+
+@utility btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .7rem 1.25rem; font-size: .875rem; font-weight: 500;
+  border-radius: var(--radius); transition: background-color .2s, color .2s;
+  background: var(--color-primary); color: var(--color-primary-foreground);
+  &:hover { background: var(--color-ink); }
+  &:disabled { opacity: .4; cursor: not-allowed; }
+}
+
+@utility btn-outline {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .7rem 1.25rem; font-size: .875rem; font-weight: 500;
+  border-radius: var(--radius); transition: background-color .2s, color .2s;
+  border: 1px solid var(--color-foreground); color: var(--color-foreground);
+  &:hover { background: var(--color-foreground); color: var(--color-background); }
+}
+
+@utility btn-accent {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .7rem 1.25rem; font-size: .875rem; font-weight: 600;
+  border-radius: var(--radius); transition: background-color .2s, color .2s;
+  background: var(--color-accent); color: var(--color-accent-foreground);
+  &:hover { filter: brightness(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
