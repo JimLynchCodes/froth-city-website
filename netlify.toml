@@ -1,8 +1,11 @@
-# Froth City Research is a static site. Publish the repository root.
-# Leave the build command empty — there is nothing to compile.
+# Froth City Research deploys as static files. Vite writes them to dist/.
 
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
 
 [build.processing]
   skip_processing = true

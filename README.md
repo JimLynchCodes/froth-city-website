@@ -1,29 +1,40 @@
 # Froth City Research
 
-Static website for Froth City Research, an independent equity research firm based in Battery Park, Manhattan. The site is plain HTML, CSS, and a small script — no application server and no build step.
+Static website for Froth City Research, an independent equity research firm based in Battery Park, Manhattan. Pages are HTML. Vite bundles the reports table and copies everything else into a static `dist/` folder. There is no application server at runtime.
 
 ## Run locally
 
 From the repository root:
 
 ```sh
-npx serve
+npm install
+npm run dev
 ```
 
-`serve` prints a local URL (usually http://localhost:3000). The same thing is available as `npm run dev`.
+`dev` starts Vite at http://localhost:3000. The reports page loads AG Grid from the project dependency, not from a CDN.
+
+## Build and preview
+
+```sh
+npm run build
+npm run preview
+```
+
+`build` writes the static site to `dist/`. `preview` serves that folder at http://localhost:3000. Deploy the contents of `dist/` only. The result is HTML, CSS, JavaScript, images, and PDFs.
 
 ## Deploy to Netlify
 
 Connect the repository and use the committed `netlify.toml`:
 
-- **Publish directory:** `.` (the repository root)
-- **Build command:** none
+- **Build command:** `npm run build`
+- **Publish directory:** `dist`
+- **Node version:** 22
 
 Netlify serves each folder's `index.html` (`/about/` is `about/index.html`, each report lives at `/reports/<slug>/`). Unknown URLs use `404.html`.
 
 There is no contact form. The contact page links to `research@frothcity.com` and `(212) 555-0147`.
 
-Report PDFs live in `downloads/`. A report stays subscriber-only for 30 days after its publication date; after that, the download button appears once the reader checks the agreement. That check runs in the browser from the date in the page, so it stays correct without a server.
+Report PDFs live in `public/downloads/` and are copied to `dist/downloads/`. A report stays subscriber-only for 30 days after its publication date; after that, the download button appears once the reader checks the agreement. That check runs in the browser from the date in the page, so it stays correct without a server.
 
 ## Pages
 
