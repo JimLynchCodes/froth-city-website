@@ -65,11 +65,18 @@ function initGates() {
 
 function initMenus() {
   document.querySelectorAll("details.menu").forEach((menu) => {
+    const summary = menu.querySelector("summary");
+    summary?.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (menu.matches(":hover") && menu.open) return;
+      menu.open = !menu.open;
+    });
     menu.addEventListener("mouseenter", () => {
       menu.open = true;
     });
     menu.addEventListener("mouseleave", () => {
-      if (!menu.contains(document.activeElement)) menu.open = false;
+      const active = document.activeElement;
+      if (!menu.contains(active) || active === summary) menu.open = false;
     });
     menu.addEventListener("focusout", (event) => {
       if (!menu.contains(event.relatedTarget)) menu.open = false;
