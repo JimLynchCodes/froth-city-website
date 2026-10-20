@@ -740,6 +740,7 @@ table.data a:hover { color: var(--brass); }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   border-radius: 50%;
 }
 

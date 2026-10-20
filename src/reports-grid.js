@@ -33,19 +33,19 @@ const theme = themeQuartz.withPart(colorSchemeLight).withParams({
 
 const rows = [
   {
-    title: "Uranium: The Fuel Works. The Equity Has to Wait",
-    ticker: "URN",
-    href: "/reports/uranium/",
-    category: "Uranium / Nuclear",
-    date: "2026-10-20",
-    direction: "Short",
-  },
-  {
     title: "Oracle: The Software Franchise Is Funding the Build",
     ticker: "ORCL",
     href: "/reports/oracle/",
     category: "AI / Data Centers",
-    date: "2026-10-20",
+    date: "2026-09-21",
+    direction: "Short",
+  },
+  {
+    title: "Uranium: The Fuel Works. The Equity Has to Wait",
+    ticker: "URN",
+    href: "/reports/uranium/",
+    category: "Uranium / Nuclear",
+    date: "2026-09-07",
     direction: "Short",
   },
   {
@@ -53,7 +53,7 @@ const rows = [
     ticker: "CRWV",
     href: "/reports/coreweave/",
     category: "AI / Data Centers",
-    date: "2026-10-20",
+    date: "2026-08-24",
     direction: "Short",
   },
 ];
