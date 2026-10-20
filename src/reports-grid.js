@@ -68,6 +68,24 @@ const rows = [
     direction: "Short",
     access: "Available",
   },
+  {
+    title: "WW International: A Smaller Loan on a Shrinking Business",
+    ticker: "WW",
+    href: "/reports/ww/",
+    category: "Consumer / Weight Loss",
+    date: "2026-06-08",
+    direction: "Short",
+    access: "Available",
+  },
+  {
+    title: "Uniti: The REIT Ended. The Debt Did Not.",
+    ticker: "UNIT",
+    href: "/reports/uniti/",
+    category: "Telecom / Fiber",
+    date: "2026-05-18",
+    direction: "Short",
+    access: "Available",
+  },
 ];
 
 function formatDate(iso) {
