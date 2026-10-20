@@ -34,7 +34,7 @@ Netlify serves each folder's `index.html` (`/about/` is `about/index.html`, each
 
 There is no contact form. The contact page links to `research@frothcity.com` and `(212) 555-0147`.
 
-Report PDFs live in `public/downloads/` and are copied to `dist/downloads/`. A report stays subscriber-only for 30 days after its publication date; after that, the download button appears once the reader checks the agreement. That check runs in the browser from the date in the page, so it stays correct without a server.
+Report PDFs live in `public/downloads/` and are copied to `dist/downloads/`. On a report page, the Download PDF button stays disabled until the reader checks the agreement. That check runs in the browser. There is no account and no publication delay.
 
 ## Pages
 

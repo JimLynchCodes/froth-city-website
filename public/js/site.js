@@ -1,65 +1,31 @@
-const FREE_DELAY_DAYS = 30;
-const DAY = 86_400_000;
-
-function freeAvailableDate(iso) {
-  return new Date(new Date(`${iso}T00:00:00Z`).getTime() + FREE_DELAY_DAYS * DAY);
-}
-
-function fmtDate(date) {
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-    timeZone: "UTC",
-  });
-}
-
-function initGates() {
-  document.querySelectorAll("[data-published]").forEach((panel) => {
-    const published = panel.getAttribute("data-published");
+function initDownloads() {
+  document.querySelectorAll("[data-pdf]").forEach((panel) => {
     const pdf = panel.getAttribute("data-pdf");
     const filename = panel.getAttribute("data-filename");
-    if (!published || !pdf || !filename) return;
+    const box = panel.querySelector("[data-agree]");
+    const link = panel.querySelector("[data-download]");
+    if (!pdf || !filename || !box || !link) return;
 
-    const freeOn = freeAvailableDate(published);
-    const isFree = Date.now() >= freeOn.getTime();
-    const pending = panel.querySelector("[data-pending]");
-    const freeEl = panel.querySelector("[data-free]");
-    const lockedEl = panel.querySelector("[data-locked]");
-    if (pending) pending.hidden = true;
+    const sync = () => {
+      const agreed = box.checked;
+      if (agreed) {
+        link.href = pdf;
+        link.setAttribute("download", filename);
+        link.classList.remove("is-disabled");
+        link.removeAttribute("aria-disabled");
+      } else {
+        link.removeAttribute("href");
+        link.removeAttribute("download");
+        link.classList.add("is-disabled");
+        link.setAttribute("aria-disabled", "true");
+      }
+    };
 
-    if (isFree && freeEl) {
-      freeEl.hidden = false;
-      const box = freeEl.querySelector("[data-agree]");
-      const link = freeEl.querySelector("[data-download]");
-      const sync = () => {
-        const agreed = Boolean(box && box.checked);
-        if (!link) return;
-        if (agreed) {
-          link.href = pdf;
-          link.setAttribute("download", filename);
-          link.classList.remove("is-disabled");
-          link.removeAttribute("aria-disabled");
-        } else {
-          link.removeAttribute("href");
-          link.removeAttribute("download");
-          link.classList.add("is-disabled");
-          link.setAttribute("aria-disabled", "true");
-        }
-      };
-      box?.addEventListener("change", sync);
-      link?.addEventListener("click", (event) => {
-        if (!box || !box.checked) event.preventDefault();
-      });
-      sync();
-      return;
-    }
-
-    if (lockedEl) {
-      const slot = lockedEl.querySelector("[data-free-on]");
-      if (slot) slot.textContent = fmtDate(freeOn);
-      lockedEl.hidden = false;
-    }
+    box.addEventListener("change", sync);
+    link.addEventListener("click", (event) => {
+      if (!box.checked) event.preventDefault();
+    });
+    sync();
   });
 }
 
@@ -117,7 +83,7 @@ function initHeader() {
   window.addEventListener("scroll", onScroll, { passive: true });
 }
 
-initGates();
+initDownloads();
 initMenus();
 initYear();
 initHeader();

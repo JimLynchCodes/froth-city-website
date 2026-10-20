@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CoreWeave: Debt, Rates, and the Data-Center Crossfire — Froth City Research</title>
-    <meta name="description" content="CoreWeave's scheduled debt principal was $35.6 billion at June 30, 2026, and quarterly interest expense already exceeds operating income. The book is concentrated in AI infrastructure demand, including a large commitment from OpenAI, while local fights over power, water, and zoning are slowing the data-center buildout the debt is funding." />
+    <meta name="description" content="Short CRWV. Scheduled debt principal was $35.6 billion at June 30, 2026, quarterly interest expense was $640 million against a $49 million operating loss, and the equity is a thin residual if AI infrastructure spending breaks." />
     <meta property="og:title" content="CoreWeave: Debt, Rates, and the Data-Center Crossfire — Froth City Research" />
-    <meta property="og:description" content="CoreWeave's scheduled debt principal was $35.6 billion at June 30, 2026, and quarterly interest expense already exceeds operating income." />
+    <meta property="og:description" content="Short CRWV. $35.6 billion of scheduled principal, $640 million of quarterly interest expense, and a thin equity residual under the debt." />
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#f7f6f3" />
@@ -143,7 +143,8 @@
       <div class="wrap">
         <a class="back" href="/reports/">← All reports</a>
         <div class="report-grid">
-          <article>
+          <article class="research-note">
+            <p class="print-mast">Froth City Research · Short sale note · CRWV · October 19, 2026</p>
             <div class="report-meta">
               <span class="ticker">CRWV</span>
               <span class="dir dir-short"><span aria-hidden="true">▼</span> Short</span>
@@ -151,99 +152,242 @@
               <time datetime="2026-10-19">Oct 19, 2026</time>
             </div>
             <h1>CoreWeave: Debt, Rates, and the Data-Center Crossfire</h1>
-            <p class="blurb">CoreWeave&#39;s scheduled debt principal was $35.6 billion at June 30, 2026, and quarterly interest expense already exceeds operating income. The book is concentrated in AI infrastructure demand, including a large commitment from OpenAI, while local fights over power, water, and zoning are slowing the data-center buildout the debt is funding.</p>
+            <p class="blurb">CoreWeave is funding a GPU cloud with $35.6 billion of scheduled debt principal. Interest already exceeds operating income. The equity is what is left if the AI buildout slips.</p>
+
+            <p class="note-kicker">Executive summary</p>
+            <div class="exec-summary">
+              <p>We are short CoreWeave. At June 30, 2026 the company reported $35,551 million of future principal payments on its debt, $31,405 million of recourse debt net of discount, and a further $3,663 million of non-recourse debt. In the same quarter it lost $49 million from operations and recorded $640 million of interest expense, net. First-half cash from operations was $3.7 billion. First-half cash debt service was about $6.2 billion. The build does not fund itself.<a class="fn" href="#fn-1">1</a></p>
+              <p>The next two years are a refinancing calendar, not a slogan. Principal due in the rest of 2026 is $4,413 million, and 2027 is $6,184 million. Much of the stack is floating-rate debt priced over SOFR. CoreWeave’s own sensitivity is about $30 million of quarterly interest expense per 100 basis points. High-coupon notes sit beside that floating paper at effective rates of 9% to 10%.<a class="fn" href="#fn-1">1</a></p>
+              <p>The revenue that has to carry this debt is concentrated, and one of the named forward customers is deeply unprofitable. Microsoft, a profitable public company, was about 67% of 2025 revenue. Meta, also profitable, has an initial commitment CoreWeave describes as up to about $21.0 billion. OpenAI OpCo has committed up to about $6.5 billion through May 2031. Leaked 2025 accounts reviewed by the Financial Times show OpenAI revenue of $13.07 billion and an operating loss of $20.92 billion. We have not audited those statements. We also have not watched Microsoft or Meta become unprofitable, and this note does not say that they have.<a class="fn" href="#fn-2">2</a><a class="fn" href="#fn-4">4</a></p>
+              <p>Class A shares closed at $61.12 on October 19, 2026. June 30 book equity was $5,024 million, about $9.12 per basic share on 457 million Class A shares and 94 million Class B shares. At the Class A close, the stock was about 6.7 times that book value. We do not invent a price target. We do say the equity is a thin residual under $35.6 billion of principal and $16.3 billion of operating lease liabilities. If AI infrastructure spending breaks, or if power and zoning delays push the day the sites earn, we think the equity can be fatally hurt.<a class="fn" href="#fn-1">1</a><a class="fn" href="#fn-3">3</a></p>
+            </div>
+
             <dl class="key-stats">
-              <div>
-                <dt>Scheduled principal</dt>
-                <dd>$35.6bn</dd>
-              </div>
-              <div>
-                <dt>Recourse debt, net</dt>
-                <dd>$31.4bn</dd>
-              </div>
-              <div>
-                <dt>Q2 interest expense, net</dt>
-                <dd>$640m</dd>
-              </div>
-              <div>
-                <dt>Q2 operating loss</dt>
-                <dd>$49m</dd>
-              </div>
-              <div>
-                <dt>Q2 revenue</dt>
-                <dd>$2.58bn</dd>
-              </div>
-              <div>
-                <dt>Remaining performance obligations</dt>
-                <dd>$103.7bn</dd>
-              </div>
+              <div><dt>Scheduled principal</dt><dd>$35.6bn</dd></div>
+              <div><dt>Recourse debt, net</dt><dd>$31.4bn</dd></div>
+              <div><dt>Q2 interest expense, net</dt><dd>$640m</dd></div>
+              <div><dt>Q2 operating loss</dt><dd>$49m</dd></div>
+              <div><dt>Q2 revenue</dt><dd>$2.58bn</dd></div>
+              <div><dt>Unsatisfied RPO</dt><dd>$103.7bn</dd></div>
             </dl>
-            <p class="key-note">Figures as of or for the period ended June 30, 2026. Dollars in the filing are millions. Sources below.</p>
-            <div class="report-body">
-              <h2>The position</h2>
-              <p>CoreWeave rents GPU capacity, mostly to companies training and running AI models. The equity pitch is the contracted backlog. The credit question is the balance sheet underneath it. We are short CRWV because the build is being funded with a large, mostly high-coupon debt stack, because interest expense already overwhelms operating income, and because the revenue that has to service that debt is concentrated in AI infrastructure spending. If that spending slows, both the cash that pays the coupons and the market that refinances the principal can shrink at the same time. That is an opinion about risk. It is not a prediction that a particular maturity will be missed.</p>
+            <p class="key-note">June 30, 2026, unless noted. Dollars in the filing are millions. RPO is contracted revenue, not cash and not capex.</p>
 
-              <h2>What the quarter shows</h2>
-              <p>For the quarter ended June 30, 2026, CoreWeave reported revenue of $2,575 million and an operating loss of $49 million. Interest expense, net was $640 million, compared with $267 million in the year-earlier quarter. Management attributed the increase of $373 million, or 140%, primarily to higher borrowing and a larger debt balance. Net loss was $626 million. For the six months, revenue was $4,653 million, the operating loss was $193 million, interest expense, net was $1,176 million against $531 million a year earlier, and the net loss was $1,366 million.</p>
-              <p>The same filing shows how much cash the build is already absorbing. Purchases of property and equipment, including capitalized internal-use software, were $14,117 million in the first half of 2026, against $3,860 million in the 2025 period. Net cash used in investing was $14,874 million. Net cash provided by operating activities was $3,663 million. That operating figure is after interest paid, net of amounts capitalized, of $806 million. Cash dedicated to debt service in the half was about $6.2 billion: $5.2 billion of principal and $982 million of interest, including $176 million of capitalized interest.</p>
+            <ol class="contents">
+              <li><a href="#debt"><span>1</span> Crushing debt load and the refinancing calendar</a></li>
+              <li><a href="#rates"><span>2</span> Interest-rate headwinds</a></li>
+              <li><a href="#towns"><span>3</span> Local political and community opposition</a></li>
+              <li><a href="#customers"><span>4</span> Concentration, and a deeply unprofitable buyer</a></li>
+              <li><a href="#unwind"><span>5</span> Why an AI-spend unwind could be fatal</a></li>
+              <li><a href="#valuation"><span>6</span> Valuation and downside</a></li>
+              <li><a href="#risks"><span>7</span> Risks to the short</a></li>
+            </ol>
 
-              <h2>The debt, and what is not the debt</h2>
-              <p>At June 30, 2026, recourse debt, net of unamortized discount and issuance costs, was $31,405 million. Of that, $6,235 million was current and $25,170 million was non-current. Non-recourse debt, net, was $3,663 million, limited to certain subsidiaries except for specified bad-act guarantees. Future principal payments on total debt were $4,413 million for the rest of 2026, $6,184 million in 2027, $4,416 million in 2028, $2,421 million in 2029, $3,221 million in 2030, and $14,896 million thereafter. The total is $35,551 million.</p>
-              <p>Those principal amounts are the schedule in the debt footnote. They are not facility sizes. In March 2026 CoreWeave put in place a DDTL 4.0 facility of $8,500 million, priced at SOFR plus 2.25% or Treasury plus 2.00%. In May 2026 it put in place a DDTL 5.0 facility of $3,100 million at SOFR plus 4.50%. Drawn balances were smaller. At June 30, DDTL 5.0 had $1,101 million outstanding, and the non-recourse DDTL 4.0 facility had $2,837 million outstanding. Management separately reported $13.6 billion outstanding under delayed-draw term loans and $16.6 billion of aggregate outstanding principal on notes.</p>
-              <p>Effective rates on the drawn book run from 2% on the convertible notes to 15% on the oldest delayed-draw loan. Senior-note effective rates cluster around 9% to 10%. The weighted-average rate on short-term OEM financing was 9%. Operating lease liabilities were a further $16.3 billion. Those leases are not inside the $35.6 billion principal schedule. The accumulated deficit was $4,009 million.</p>
-              <p>Remaining performance obligations — contracted revenue not yet recognized, net of estimated variable consideration — were $103.7 billion. CoreWeave expected to recognize 41% of that by June 30, 2028, 39% in the following two years, and the rest between months 49 and 78. RPO is a backlog figure. It is not cash on hand, and it is not the capital expenditure required to deliver the capacity.</p>
+            <h2 id="debt"><span class="num">01</span> Crushing debt load and the refinancing calendar</h2>
+            <p>CoreWeave’s debt footnote is the report. At June 30, 2026, future principal payments on total debt were $4,413 million for the rest of 2026, $6,184 million in 2027, $4,416 million in 2028, $2,421 million in 2029, $3,221 million in 2030, and $14,896 million thereafter. The total is $35,551 million. That figure is the schedule of principal. It is not a facility commitment, and it is not the same as the carrying value after discounts.<a class="fn" href="#fn-1">1</a></p>
 
-              <h2>Rates and the wall in front of the company</h2>
-              <p>A large part of the stack is floating-rate term loans priced over SOFR, or in one case Treasury, sitting next to senior notes with coupons from 9.00% to 9.75%. The convertibles, at a 2% effective rate, are the cheap slice. They are not most of the book. Interest expense, net of $640 million in a single quarter is already an order of magnitude larger than the quarter&#39;s $49 million operating loss. A company that merely broke even on operations would still be handing the entire operating result, and more, to lenders.</p>
-              <p>CoreWeave quantified the floating-rate exposure. For every 100 basis point move in interest rates, interest expense could rise or fall by about $30 million in a quarter and $61 million over six months, based on the floating-rate balance at June 30, 2026. The nearer problem is principal. About $4.4 billion comes due in the remainder of 2026 and $6.2 billion in 2027. Refinancing that paper, or drawing more on facilities priced at a spread over SOFR, costs more if policy rates stay elevated, and it requires credit markets that are still willing to fund AI infrastructure.</p>
-              <p>Equity has been a supplement, not a replacement for the amortization schedule. The March 2025 IPO of 37 million Class A shares at $40 produced $1.4 billion of net proceeds, before $31 million of offering costs, and the underwriters later bought about 2 million more shares for $68 million of net proceeds. In January 2026, NVIDIA bought about 23 million shares at $87.20, for $2.0 billion gross. In April 2026 the company sold about 9 million shares at $109, for $1.0 billion gross.</p>
+            <figure class="chart">
+              <svg viewBox="0 0 680 248" role="img" aria-labelledby="chart-maturity-title">
+                <title id="chart-maturity-title">Scheduled principal payments in millions of dollars</title>
+                <text x="0" y="28" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1c2430">Rest of 2026</text>
+                <rect x="150" y="14" width="124" height="18" fill="#9b2c2c"></rect>
+                <text x="282" y="28" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c2430">$4,413</text>
+                <text x="0" y="64" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1c2430">2027</text>
+                <rect x="150" y="50" width="174" height="18" fill="#9b2c2c"></rect>
+                <text x="332" y="64" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c2430">$6,184</text>
+                <text x="0" y="100" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1c2430">2028</text>
+                <rect x="150" y="86" width="125" height="18" fill="#1e3a5f"></rect>
+                <text x="283" y="100" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c2430">$4,416</text>
+                <text x="0" y="136" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1c2430">2029</text>
+                <rect x="150" y="122" width="68" height="18" fill="#1e3a5f"></rect>
+                <text x="226" y="136" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c2430">$2,421</text>
+                <text x="0" y="172" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1c2430">2030</text>
+                <rect x="150" y="158" width="91" height="18" fill="#1e3a5f"></rect>
+                <text x="249" y="172" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c2430">$3,221</text>
+                <text x="0" y="208" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1c2430">Thereafter</text>
+                <rect x="150" y="194" width="420" height="18" fill="#1e3a5f"></rect>
+                <text x="578" y="208" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c2430">$14,896</text>
+              </svg>
+              <figcaption>Figure 1. Scheduled principal, in millions. The near-term bars are the refinancing problem. “Thereafter” is larger, and it still has to be rolled or repaid. Source: June 30, 2026 Form 10-Q.</figcaption>
+            </figure>
 
-              <h2>Who the revenue depends on</h2>
-              <p>In the second quarter of 2026, three customers accounted for 36%, 26%, and 10% of revenue. For the six months, the top two were 40% and 23%. Customers A and B each accounted for 32% of accounts receivable at June 30, 2026. In the year-earlier quarter the largest customer was 71% of revenue. The filing says the letter labels are not necessarily the same parties from one period to the next.</p>
-              <p>The 2025 Form 10-K names one of them. CoreWeave recognized approximately 67% of revenue from Microsoft for the year ended December 31, 2025, and no other customer was 10% or more that year. Microsoft is a profitable public company. So is Meta Platforms. In March 2026 Meta signed an order form that CoreWeave describes as an initial commitment of up to about $21.0 billion, covering new capacity through December 20, 2032 and the exercise of an existing option through April 10, 2032. In April 2026 Jane Street, which the filing identifies as a private company, committed about $6.0 billion. The filing lists Microsoft and OpenAI together as other significant customers.</p>
-              <p>The customer that matches the “unprofitable AI lab” description is OpenAI, not Microsoft or Meta. Under a May 2025 master services agreement and a September 2025 order form, OpenAI OpCo, LLC committed to pay CoreWeave up to about $6.5 billion through May 31, 2031. The same risk-factor discussion says the company expects to add early-stage and private customers, and that those customers can carry a higher risk of non-payment. We are not folding Microsoft, Meta, or Jane Street into that description.</p>
-              <p>OpenAI does not file these numbers with the SEC. Audited statements obtained by Ed Zitron and reviewed by the Financial Times, as reported by Quartz and Ars Technica in June 2026, show 2025 revenue of $13.07 billion and an operating loss of $20.92 billion. The headline net loss was about $38.5 billion and included a large charge tied to the conversion from a nonprofit structure. We have not inspected the statements ourselves. We use the operating loss, which those accounts treat as the cleaner figure, and we treat it as leaked reporting rather than a number from a CoreWeave filing.</p>
-              <p>The short is therefore not “every customer loses money.” It is that revenue is concentrated in AI infrastructure demand, that one named forward commitment is to a private company whose leaked 2025 accounts show a very large operating loss, and that the 2025 book was dominated by a single hyperscaler whose AI budget is a capital-allocation choice.</p>
+            <p>Carrying value is lower than that principal schedule because of unamortized discount and issuance costs. Recourse debt, net, was $31,405 million, of which $6,235 million was current. Non-recourse debt, net, was $3,663 million. Together, debt net of discount was $35,068 million. Non-recourse debt is limited to specified subsidiaries except for bad-act guarantees. It is still debt the structure has to service if those subsidiaries are to keep the assets.<a class="fn" href="#fn-1">1</a></p>
 
-              <h2>The towns in the way</h2>
-              <p>The capacity behind both the debt and the backlog has to be built in particular places, and several of those places are pushing back. None of the figures in this section come from the 10-Q. They are from local reporting, and we are not treating any project as cancelled.</p>
-              <p>In Kenilworth, New Jersey, NJ.com reported a roughly $1.8 billion, nearly 400,000-square-foot AI data center on a former pharmaceutical headquarters. Construction had begun in September, with operations expected in early 2027. A petition started by a nearby resident had drawn more than 4,000 signatures when that story ran. Union News Daily reported protests ahead of a May 19, 2026 planning board meeting. Cranford, next door, has moved to take data centers out of the uses permitted in its commercial zones. The township mayor said Cranford had no advance notice of the Kenilworth project. We are not relying on petition claims about megawatts or tax credits that we have not seen in a news report.</p>
-              <p>In Lancaster, Pennsylvania, LancasterOnline has reported CoreWeave data centers planned at 216 Greenfield Road and 1375 Harrisburg Pike. The city&#39;s zoning officer treated them as “wholesale trade and storage,” a classification residents wanted reviewed in a public hearing. The developers went to court and blocked that appeal. Work on the first Greenfield Road building was underway, with an opening expected in summer 2027, and the developers told the court they had already spent $1.3 billion on it. A later city ordinance regulating data centers was written so that applications already on file would keep the prior rules.</p>
-              <p>Power, water, and zoning fights do not have to stop a project to matter. They can push the date a site begins to earn. Interest on the debt raised to build it does not wait for the substation.</p>
-
-              <h2>What would have to go right</h2>
-              <p>CoreWeave can point to a $103.7 billion contracted backlog and to customers that include Microsoft and Meta. It can also point to a $35.6 billion principal schedule, a quarter in which interest expense was $640 million against a $49 million operating loss, and more than $10 billion of principal due before the end of 2027. If AI infrastructure spending stays strong and the sites get power, the backlog can carry a great deal of debt. If it does not, a company with this much leverage and this much customer concentration can be badly hurt. In a sharp unwind, we think the damage could be fatal. That is the short.</p>
-
-              <h2>Sources</h2>
-              <ol class="sources">
-                <li><a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm">CoreWeave Form 10-Q for the quarter ended June 30, 2026</a>. Revenue, operating loss, interest expense, debt balances, principal schedule, facility sizes, customer percentages, RPO, cash flow, leases, and the OpenAI, Meta, Microsoft, and Jane Street commitments cited above.</li>
-                <li><a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm">CoreWeave Form 10-K for the year ended December 31, 2025</a>. Microsoft accounted for approximately 67% of 2025 revenue.</li>
-                <li><a href="https://qz.com/openai-leaked-financials-losses-revenue-ipo-061626">Quartz, June 16, 2026</a>, and <a href="https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year/">Ars Technica</a>, on audited OpenAI statements obtained by Ed Zitron and reviewed by the Financial Times: 2025 revenue of $13.07 billion, operating loss of $20.92 billion, headline net loss of about $38.5 billion.</li>
-                <li><a href="https://www.nj.com/union/2026/04/a-18-billion-ai-data-center-is-coming-to-this-tiny-nj-borough.html">NJ.com</a> on the Kenilworth project&#39;s reported cost, size, schedule, and petition. <a href="https://unionnewsdaily.com/news/as-plans-for-an-ai-data-center-move-forward-residents-express-concerns">Union News Daily</a> on local protests. <a href="https://patch.com/new-jersey/cranford/cranford-moves-ban-data-centers-residents-raise-concerns">Cranford Patch</a> on the neighboring township&#39;s zoning change.</li>
-                <li><a href="https://lancasteronline.com/news/local/lancaster-city-data-center-developers-win-suit-to-block-residents-zoning-appeal/article_70a011c5-7cf2-4b77-9167-df7d2268bb19.html">LancasterOnline</a> on the Lancaster zoning classification, the blocked resident appeal, and the developers&#39; reported spend. <a href="https://lancasteronline.com/news/local/here-s-where-data-centers-would-be-allowed-under-lancaster-citys-proposed-rules/article_8a2a4da1-e40e-475f-a430-1f4381aa19e0.html">A companion article</a> describes the city&#39;s later data-center rules.</li>
-              </ol>
-              <p class="report-note">This note is opinion, not investment advice. Froth City Research and its affiliates may hold positions in securities discussed.</p>
+            <div class="note-scroll">
+              <table class="note">
+                <caption>Table 1. Debt carrying amounts, in millions. Effective rates are as reported. Outstanding balances are not facility sizes.</caption>
+                <thead>
+                  <tr>
+                    <th>Instrument</th>
+                    <th>Maturity</th>
+                    <th>Effective rate</th>
+                    <th>June 30, 2026</th>
+                    <th>Dec 31, 2025</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>DDTL 1.0</td><td>Mar 2028</td><td>15%</td><td>1,300</td><td>1,553</td></tr>
+                  <tr><td>DDTL 2.0</td><td>Aug 2030</td><td>11%</td><td>3,190</td><td>5,037</td></tr>
+                  <tr><td>DDTL 2.1</td><td>Mar 2031</td><td>9%</td><td>3,000</td><td>2,741</td></tr>
+                  <tr><td>DDTL 3.0</td><td>Aug 2030</td><td>9%</td><td>2,215</td><td>340</td></tr>
+                  <tr><td>DDTL 5.0</td><td>Nov 2031</td><td>9%</td><td>1,101</td><td>—</td></tr>
+                  <tr><td>2030 Senior Notes</td><td>Jun 2030</td><td>10%</td><td>2,000</td><td>2,000</td></tr>
+                  <tr><td>2031 9.00% Senior Notes</td><td>Feb 2031</td><td>10%</td><td>1,750</td><td>1,750</td></tr>
+                  <tr><td>2031 9.75% Senior Notes</td><td>Oct 2031</td><td>10%</td><td>2,750</td><td>—</td></tr>
+                  <tr><td>2032 9.625% Senior Notes</td><td>Jul 2032</td><td>10%</td><td>1,250</td><td>—</td></tr>
+                  <tr><td>2032 EUR Senior Notes</td><td>Jul 2032</td><td>9%</td><td>2,279</td><td>—</td></tr>
+                  <tr><td>2031 Convertible Senior Notes</td><td>Dec 2031</td><td>2%</td><td>2,588</td><td>2,588</td></tr>
+                  <tr><td>2032 Convertible Senior Notes</td><td>Oct 2032</td><td>2%</td><td>4,000</td><td>—</td></tr>
+                  <tr><td>OEM and software financing</td><td>Dec 2026–Jul 2030</td><td>11%</td><td>4,220</td><td>3,518</td></tr>
+                  <tr><td>Magnetar loan</td><td>Jan 2029</td><td>12%</td><td>189</td><td>273</td></tr>
+                  <tr><td>Unamortized discount and issuance costs</td><td></td><td></td><td class="neg">(427)</td><td class="neg">(242)</td></tr>
+                  <tr><td>Recourse debt, net</td><td></td><td></td><td>31,405</td><td>20,726</td></tr>
+                  <tr><td>DDTL 4.0, non-recourse</td><td>Mar 2032</td><td>7%</td><td>2,837</td><td>—</td></tr>
+                  <tr><td>OEM financing, non-recourse</td><td>Aug 2026–Aug 2028</td><td>9%</td><td>882</td><td>647</td></tr>
+                  <tr><td>Non-recourse debt, net</td><td></td><td></td><td>3,663</td><td>647</td></tr>
+                </tbody>
+              </table>
             </div>
+
+            <p>Two 2026 facilities are easy to misread. DDTL 4.0, signed in March 2026, is an $8,500 million commitment priced at SOFR plus 2.25% or Treasury plus 2.00%. DDTL 5.0, signed in May 2026, is a $3,100 million commitment at SOFR plus 4.50%. Those are sizes, not draws. At June 30, DDTL 5.0 had $1,101 million outstanding and the non-recourse DDTL 4.0 had $2,837 million outstanding. Management reported $13.6 billion outstanding under delayed-draw term loans and $16.6 billion of aggregate note principal.<a class="fn" href="#fn-1">1</a></p>
+            <p>The other obligations sit outside that principal table. Operating lease liabilities were $16.3 billion. Stockholders’ equity was $5,024 million. The accumulated deficit was $4,009 million. Property and equipment, net, was $46,736 million, which is what the debt and the leases have been used to assemble. Purchases of property and equipment in the first half of 2026 were $14,117 million, against $3,860 million in the 2025 half. Net cash used in investing was $14,874 million.<a class="fn" href="#fn-1">1</a></p>
+            <p>Remaining performance obligations were $103.7 billion. CoreWeave expected to recognize 41% by June 30, 2028, 39% over the following two years, and the rest in months 49 through 78. RPO is the transaction price allocated to work not yet delivered, net of estimated credits, delays, and capacity the company may resell. It is not cash. It is not the capex required to deliver the capacity. A reader who treats $103.7 billion of RPO as if it repaid $35.6 billion of principal has skipped the part where the buildings and the power have to show up first.<a class="fn" href="#fn-1">1</a></p>
+
+            <h2 id="rates"><span class="num">02</span> Interest-rate headwinds</h2>
+            <p>Interest expense, net was $640 million in the June quarter, up from $267 million a year earlier. The increase was $373 million, or 140%, and management attributed it primarily to more borrowing and a larger debt balance. For the six months, interest expense, net was $1,176 million against $531 million. Operating income in the quarter was a loss of $49 million. Interest was not a footnote under a profitable operating line. It was the line.<a class="fn" href="#fn-1">1</a></p>
+
+            <figure class="chart">
+              <svg viewBox="0 0 680 110" role="img" aria-labelledby="chart-interest-title">
+                <title id="chart-interest-title">June quarter operating loss versus interest expense, in millions</title>
+                <text x="0" y="32" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1c2430">Q2 operating loss</text>
+                <rect x="170" y="16" width="32" height="20" fill="#9b2c2c"></rect>
+                <text x="210" y="32" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c2430">$49</text>
+                <text x="0" y="78" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1c2430">Q2 interest expense, net</text>
+                <rect x="170" y="62" width="420" height="20" fill="#9b2c2c"></rect>
+                <text x="598" y="78" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c2430">$640</text>
+              </svg>
+              <figcaption>Figure 2. June quarter, in millions. Interest expense, net was 24.9% of the quarter’s $2,575 million of revenue. Source: Form 10-Q.</figcaption>
+            </figure>
+
+            <div class="note-scroll">
+              <table class="note">
+                <caption>Table 2. Selected results, in millions.</caption>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Q2 2026</th>
+                    <th>Q2 2025</th>
+                    <th>H1 2026</th>
+                    <th>H1 2025</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Revenue</td><td>2,575</td><td>1,212</td><td>4,653</td><td>2,194</td></tr>
+                  <tr><td>Operating income (loss)</td><td class="neg">(49)</td><td>19</td><td class="neg">(193)</td><td class="neg">(8)</td></tr>
+                  <tr><td>Interest expense, net</td><td class="neg">(640)</td><td class="neg">(267)</td><td class="neg">(1,176)</td><td class="neg">(531)</td></tr>
+                  <tr><td>Net loss</td><td class="neg">(626)</td><td class="neg">(290)</td><td class="neg">(1,366)</td><td class="neg">(605)</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Contractual interest, before amortization of discounts and before capitalization, was $592 million in the quarter and $1,075 million in the half. Capitalized interest was $176 million in the half. The income-statement “interest expense, net” and the contractual-interest line are different numbers. Both say the same thing about the direction.<a class="fn" href="#fn-1">1</a></p>
+            <p>The rate exposure is not theoretical. CoreWeave disclosed that a 100 basis point move in rates would change interest expense by about $30 million in a quarter and $61 million over six months, based on the floating-rate balance at June 30, 2026. The delayed-draw loans are priced at spreads over SOFR, and in one case over Treasury. The senior notes are the fixed, expensive slice: coupons from 9.00% to 9.75%, effective rates around 9% to 10%. The convertibles, at a 2% effective rate, are the cheap slice. They are $6,588 million of the recourse lines in the table above, not the majority of a $31.4 billion recourse book.<a class="fn" href="#fn-1">1</a></p>
+            <p>Equity raises have extended the runway. They have not retired the calendar. The March 2025 IPO of 37 million Class A shares at $40 produced $1.4 billion of net proceeds before $31 million of offering costs, and the underwriters later bought about 2 million more shares for $68 million net. In January 2026 NVIDIA bought about 23 million shares at $87.20, for $2.0 billion gross. In April 2026 the company sold about 9 million shares at $109, for $1.0 billion gross. Those proceeds are real. Set next to $4.4 billion of principal due before year-end 2026 and $6.2 billion due in 2027, they are a supplement.<a class="fn" href="#fn-1">1</a></p>
+            <p>Cash makes the same point. Unrestricted cash was $5,524 million. First-half contractual interest was $1,075 million, so the cash balance was 5.1 times that half’s contractual interest. First-half debt service was still about $6.2 billion, because principal was $5.2 billion and interest payments were $982 million, including $176 million capitalized. Operating cash flow of $3.7 billion, which is already after $806 million of interest paid net of capitalized amounts, did not cover debt service. Capex was several times larger than both.<a class="fn" href="#fn-1">1</a></p>
+
+            <h2 id="towns"><span class="num">03</span> Local political and community opposition</h2>
+            <p>The capacity behind the debt and the backlog has to be energized in specific towns. None of the project facts in this section come from the 10-Q. They come from local reporting. We are not saying any of these projects has been cancelled. A delay is enough. Interest does not wait for a substation.</p>
+            <p>In Kenilworth, New Jersey, NJ.com reported an approximately $1.8 billion, nearly 400,000-square-foot AI data center on a former pharmaceutical headquarters. Construction had begun in September, with operations expected in early 2027. A petition had more than 4,000 signatures when that story ran. Union News Daily reported protests before a May 19, 2026 planning-board meeting. Cranford, next door, has moved to take data centers out of the uses allowed in its commercial zones. The mayor said the township had no advance notice of the Kenilworth project. We are not using petition claims about megawatts or tax credits.<a class="fn" href="#fn-5">5</a></p>
+            <p>In Lancaster, Pennsylvania, LancasterOnline has reported CoreWeave data centers at 216 Greenfield Road and 1375 Harrisburg Pike. The zoning officer treated them as “wholesale trade and storage.” A resident appealed. The developers went to court and blocked the hearing. Work on the first Greenfield Road building was underway, with an opening expected in summer 2027, and the developers told the court they had already spent $1.3 billion on it. A later city ordinance on data centers was written so that complete applications already on file would keep the old rules. Opposition changed the politics. It did not, on the facts we have, stop the pour.<a class="fn" href="#fn-6">6</a></p>
+            <p>That is the crossfire. Power, water, noise, and zoning fights are now a normal constraint on this industry. For a company whose first-half capex was $14.1 billion and whose lenders are being paid from a schedule, a slipped energization date is a credit event in slow motion even when the bulldozers are still on site.</p>
+
+            <h2 id="customers"><span class="num">04</span> Concentration, and a deeply unprofitable buyer</h2>
+            <p>The customer base is not “unprofitable companies, full stop.” Microsoft and Meta are profitable public companies. Saying otherwise would be false, and it is not the short. The short is that revenue is extremely concentrated in AI infrastructure demand, and that one of the large named commitments is to a private company whose leaked 2025 accounts show an operating loss larger than its revenue.</p>
+
+            <figure class="chart">
+              <svg viewBox="0 0 680 140" role="img" aria-labelledby="chart-customer-title">
+                <title id="chart-customer-title">Share of CoreWeave revenue, quarter ended June 30, 2026</title>
+                <text x="0" y="32" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1c2430">Customer A</text>
+                <rect x="120" y="16" width="216" height="20" fill="#1e3a5f"></rect>
+                <text x="344" y="32" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c2430">36%</text>
+                <text x="0" y="72" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1c2430">Customer B</text>
+                <rect x="120" y="56" width="156" height="20" fill="#1e3a5f"></rect>
+                <text x="284" y="72" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c2430">26%</text>
+                <text x="0" y="112" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1c2430">Customer C</text>
+                <rect x="120" y="96" width="60" height="20" fill="#1e3a5f"></rect>
+                <text x="188" y="112" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c2430">10%</text>
+              </svg>
+              <figcaption>Figure 3. Customers at or above 10% of revenue, quarter ended June 30, 2026. The filing says the letters are not necessarily the same parties as in prior periods. Source: Form 10-Q.</figcaption>
+            </figure>
+
+            <p>In the June 2026 quarter, three customers were 36%, 26%, and 10% of revenue. For the six months the top two were 40% and 23%. Customers A and B were each 32% of accounts receivable at June 30. A year earlier, one customer was 71% of the quarter. The 2025 Form 10-K names the dominant customer for that year: approximately 67% of revenue came from Microsoft, and no other customer was 10% or more. The June 2026 letters are not a second source for that Microsoft figure. The filing warns that the letters can change identity between periods.<a class="fn" href="#fn-1">1</a><a class="fn" href="#fn-2">2</a></p>
+            <p>The forward commitments the company does name are large. OpenAI OpCo, under a May 2025 master agreement and a September 2025 order form, committed to pay up to about $6.5 billion through May 31, 2031. In March 2026 Meta signed an order form CoreWeave describes as an initial commitment of up to about $21.0 billion, covering new capacity through December 20, 2032 and the exercise of an existing option through April 10, 2032. In April 2026 Jane Street, identified in the filing as a private company, committed about $6.0 billion. The same risk factor lists Microsoft and OpenAI as other significant customers, and it says early-stage and private customers can carry a higher risk of non-payment. Jane Street is in that paragraph as a private company. We do not describe Jane Street, Microsoft, or Meta as loss-making.<a class="fn" href="#fn-1">1</a></p>
+            <p>OpenAI is the name that fits. It does not file these figures with the SEC. Audited statements obtained by Ed Zitron and reviewed by the Financial Times, as reported by Quartz and Ars Technica in June 2026, show 2025 revenue of $13.07 billion and an operating loss of $20.92 billion. The headline net loss was about $38.5 billion and included a large charge from the conversion out of a nonprofit structure. Quartz and Zitron describe a $41.55 billion fair-value charge inside that net loss. Ars, citing the Financial Times and a person familiar with the matter, describes a non-recurring charge of about $30 billion and a roughly $8 billion net loss without it. We use the operating loss, which the accounts agree on, and we treat it as leaked reporting. We have not inspected the statements.<a class="fn" href="#fn-4">4</a></p>
+            <p>A $6.5 billion OpenAI commitment is not most of CoreWeave’s revenue today. It matters because the short is about what has to keep being true. The 2025 book was dominated by one hyperscaler’s AI budget. The forward book adds another hyperscaler and a private lab that, on these leaked numbers, lost $20.92 billion from operations in a year when it made $13.07 billion. Those buyers can cut, delay, or renegotiate. CoreWeave’s coupons cannot.</p>
+
+            <h2 id="unwind"><span class="num">05</span> Why an AI-spend unwind could be fatal</h2>
+            <p>This section is opinion. It is the reason for the short, not a fact the 10-Q asserts.</p>
+            <p>CoreWeave’s obligations are rigid and its demand is a capital-spending cycle. Principal of $4.4 billion is due before the end of 2026 and $6.2 billion in 2027, whatever happens to GPU rental prices. Interest of $640 million in a single quarter already swamps a $49 million operating loss. Lease liabilities of $16.3 billion are a second fixed claim. The asset that supports all of it, $46.7 billion of net property and equipment, is specialized. It is worth what the next buyer of GPU hours will pay, in towns that will supply the power.</p>
+            <p>The backlog is the bull case, and it is a real number: $103.7 billion of unsatisfied RPO. An unwind does not have to erase that number overnight to hurt the equity. It has to make some of it late, smaller, or more expensive to deliver. The 10-Q already defines RPO net of estimated credits, delivery delays, and capacity the company has the right to resell. If those estimates get worse, recognized revenue slips while contractual interest does not. First-half numbers are the template. Operations produced $3.7 billion of cash. Debt service took about $6.2 billion. Investing took $14.9 billion. The gap was filled by more debt and more stock. That is a model that works while credit markets and equity markets will fund AI infrastructure. It is not a model with a thick equity cushion if they stop.</p>
+            <p>Book equity is $5.0 billion. The accumulated deficit is $4.0 billion. Illustrative equity value, using the June 30 basic share count marked at the October 19 Class A price, is about $33.7 billion, and that figure has the caveats in the next section. Either way, the equity is the residual under $35.6 billion of scheduled principal. A residual can go to zero without the debt going to zero. That is what we mean by fatal. We are not predicting a filing date. We are saying the capitalization does not have a second act if the AI capex cycle turns while this maturity wall is still in front of the company.</p>
+
+            <h2 id="valuation"><span class="num">06</span> Valuation and downside</h2>
+            <p>We do not publish a price target. A target would require a multiple we would be choosing, or a share count we do not have for October. What follows is arithmetic on figures we can cite. It is not a forecast.</p>
+            <div class="note-scroll">
+              <table class="note">
+                <caption>Table 3. Valuation arithmetic. Share counts and book equity are June 30, 2026. The share price is the October 19, 2026 Class A close.</caption>
+                <thead>
+                  <tr><th>Item</th><th>Figure</th><th>How it is derived</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Class A close, Oct 19, 2026</td><td>$61.12</td><td>StockAnalysis historical prices<a class="fn" href="#fn-3">3</a></td></tr>
+                  <tr><td>Class A shares outstanding</td><td>457 million</td><td>June 30, 2026 balance sheet<a class="fn" href="#fn-1">1</a></td></tr>
+                  <tr><td>Class B shares outstanding</td><td>94 million</td><td>June 30, 2026 balance sheet<a class="fn" href="#fn-1">1</a></td></tr>
+                  <tr><td>Basic shares</td><td>551 million</td><td>457 + 94. Matches Q2 basic weighted-average shares<a class="fn" href="#fn-1">1</a></td></tr>
+                  <tr><td>Stockholders’ equity</td><td>$5,024 million</td><td>June 30, 2026<a class="fn" href="#fn-1">1</a></td></tr>
+                  <tr><td>Book value per basic share</td><td>$9.12</td><td>5,024 ÷ 551, rounded</td></tr>
+                  <tr><td>Class A close ÷ book value</td><td>6.7×</td><td>61.12 ÷ 9.12</td></tr>
+                  <tr><td>Class A stake at the close</td><td>$27,932 million</td><td>457 × 61.12. Ignores Class B</td></tr>
+                  <tr><td>Illustrative equity, all basic shares</td><td>$33,677 million</td><td>551 × 61.12. Assumes Class B is worth the Class A price</td></tr>
+                  <tr><td>Debt, net of discount</td><td>$35,068 million</td><td>31,405 recourse + 3,663 non-recourse</td></tr>
+                  <tr><td>Unrestricted cash</td><td>$5,524 million</td><td>Cash and cash equivalents<a class="fn" href="#fn-1">1</a></td></tr>
+                  <tr><td>Illustrative enterprise value</td><td>$63,221 million</td><td>33,677 + 35,068 − 5,524</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>The $33.7 billion equity figure is not a market-cap print. The share count is seven weeks stale relative to a June 30 balance sheet and an October 19 price, issuance after June 30 is not in it, and Class B may not trade at the Class A price. Restricted cash, $873 million current and $507 million non-current, is excluded from the cash deduction because it is not free cash. Convertible notes of $2,588 million and $4,000 million can add shares if they are in the money. We do not have a conversion price in the figures we are willing to use here, so we do not guess a diluted count.</p>
+            <p>Read the table from the bottom up. An illustrative enterprise value around $63 billion sits on first-half revenue of $4,653 million and a quarter in which the company did not cover its interest from operations. Book equity of $5.0 billion is the accounting residual. At $61.12, Class A traded at about 6.7 times June 30 book value per basic share. The distance between $61.12 and $9.12 is the distance between the price and the accounting residual. We are not saying the stock “should” trade at book. We are saying book is thin relative to $35.6 billion of scheduled principal and $16.3 billion of lease liabilities, and a re-rating toward that residual would be a large loss for the equity. If the assets are impaired, book itself can fall. The accumulated deficit says the accounting residual has already been consumed once, and then refilled by new capital.</p>
+            <p>Downside, stated without a target: the equity is a claim on whatever remains after the principal schedule, the leases, and the cost of finishing sites that towns are contesting. The bull case is that $103.7 billion of RPO turns into cash on time and the debt amortizes. The short is that this price still capitalizes that outcome.</p>
+
+            <h2 id="risks"><span class="num">07</span> Risks to the short</h2>
+            <p>The backlog can pay for a great deal of debt if the sites are delivered. RPO of $103.7 billion is not a rumor. Management also says the delayed-draw loans are collateralized by contributed contracts and pledged cash flows, generally from investment-grade counterparties, and that they amortize as those cash flows arrive.<a class="fn" href="#fn-1">1</a></p>
+            <p>Microsoft and Meta can pay. A thesis that needs them to default is a different, weaker thesis, and it is not this one. Their commitments can fund a large share of the build if they take the capacity. Jane Street’s $6 billion commitment is a third contracted buyer we are not calling distressed.</p>
+            <p>The company has sold stock at $40, at $87.20, and at $109. It can try again. A lower stock price makes that dilution more painful for existing holders, which is part of the short, but it does not make a raise impossible. Rates can fall. The disclosed sensitivity cuts both ways: 100 basis points lower is about $30 million less interest expense per quarter. Kenilworth and Lancaster have drawn protests and, in Lancaster, a lawsuit, and construction has continued. We may be early, or wrong, about an unwind in AI spending. The OpenAI loss figures are leaked. If the audited statements differ, the customer section has to be reread. The June-quarter customer letters are not a named list, so a reader should not treat Customer A as Microsoft just because Microsoft was 67% of 2025.</p>
+            <p>The short is wrong if CoreWeave delivers the capacity, collects the contracted cash, and refinances the 2026 and 2027 principal without a break in the price of GPU hours or in the willingness of credit markets to extend. That is a possible outcome. It is not the one the capitalization is built to survive comfortably.</p>
+
+            <h2 id="sources"><span class="num">08</span> Notes</h2>
+            <ol class="footnotes">
+              <li id="fn-1">CoreWeave, Inc., Form 10-Q for the quarter ended June 30, 2026, filed with the SEC. Unless a sentence is footnoted elsewhere, the financial figures in this note are from that filing, in millions as reported. <a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm">sec.gov</a>.</li>
+              <li id="fn-2">CoreWeave, Inc., Form 10-K for the year ended December 31, 2025. “We recognized an aggregate of approximately 67% of our revenue from our top customer, Microsoft.” <a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm">sec.gov</a>.</li>
+              <li id="fn-3">Class A closing price of $61.12 on October 19, 2026, as reported in the historical price table at <a href="https://stockanalysis.com/stocks/crwv/history/">stockanalysis.com</a>. The prior session in that table, October 16, 2026, closed at $61.39.</li>
+              <li id="fn-4">OpenAI figures are not from a CoreWeave filing and not from an OpenAI SEC report we inspected. <a href="https://qz.com/openai-leaked-financials-losses-revenue-ipo-061626">Quartz, June 16, 2026</a>, and <a href="https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year/">Ars Technica</a>, on statements obtained by Ed Zitron and reviewed by the Financial Times: 2025 revenue $13.07 billion, operating loss $20.92 billion, headline net loss about $38.5 billion.</li>
+              <li id="fn-5">Kenilworth: <a href="https://www.nj.com/union/2026/04/a-18-billion-ai-data-center-is-coming-to-this-tiny-nj-borough.html">NJ.com</a> on cost, size, schedule, and the petition; <a href="https://unionnewsdaily.com/news/as-plans-for-an-ai-data-center-move-forward-residents-express-concerns">Union News Daily</a> on protests; <a href="https://patch.com/new-jersey/cranford/cranford-moves-ban-data-centers-residents-raise-concerns">Cranford Patch</a> on the neighboring zoning change.</li>
+              <li id="fn-6">Lancaster: <a href="https://lancasteronline.com/news/local/lancaster-city-data-center-developers-win-suit-to-block-residents-zoning-appeal/article_70a011c5-7cf2-4b77-9167-df7d2268bb19.html">LancasterOnline</a> on the zoning classification, the blocked appeal, and the developers’ reported spend; <a href="https://lancasteronline.com/news/local/here-s-where-data-centers-would-be-allowed-under-lancaster-citys-proposed-rules/article_8a2a4da1-e40e-475f-a430-1f4381aa19e0.html">companion article</a> on the later ordinance.</li>
+            </ol>
+            <p class="report-note">This note is opinion, not investment advice. Froth City Research and its affiliates may hold positions in securities discussed. Do your own diligence.</p>
           </article>
-          <aside class="download-card" data-published="2026-10-19" data-pdf="/downloads/coreweave.pdf" data-filename="coreweave.pdf">
-            <p class="eyebrow">Download Report</p>
-            <p class="dl-count">186 downloads · PDF</p>
-            <p class="gate-pending" data-pending>Checking publication window…</p>
-            <div data-free hidden>
-              <label class="agree">
-                <input type="checkbox" data-agree />
-                <span>I agree that this report is opinion, not investment advice, and that Froth City Research may hold positions in the securities discussed.</span>
-              </label>
-              <a class="btn btn-block is-disabled" data-download aria-disabled="true">Download PDF</a>
-            </div>
-            <div class="gate-locked" data-locked hidden>
-              <p>Subscriber-only until <strong data-free-on></strong>. Subscribe for instant access to this and every new report.</p>
-              <a class="btn btn-brass btn-block" href="/pricing/">Subscribe for instant access</a>
-            </div>
+          <aside class="download-card" id="download" data-pdf="/downloads/coreweave.pdf" data-filename="CoreWeave-Debt-Rates-and-the-Data-Center-Crossfire.pdf">
+            <p class="eyebrow">Download the note</p>
+            <p class="gate-pending">Same report as this page. No account.</p>
+            <label class="agree">
+              <input type="checkbox" data-agree />
+              <span>I agree that this report is opinion, not investment advice, and that Froth City Research may hold positions in the securities discussed.</span>
+            </label>
+            <a class="btn btn-block is-disabled" data-download aria-disabled="true">Download PDF</a>
             <noscript>
-              <p class="gate-pending">JavaScript is required to confirm whether this report is inside the 30-day public window. Published Oct 19, 2026.</p>
+              <p class="gate-pending"><a href="/downloads/coreweave.pdf">Download the PDF</a></p>
             </noscript>
           </aside>
+
         </div>
       </div>
     </section>
