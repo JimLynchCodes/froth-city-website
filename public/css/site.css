@@ -1062,6 +1062,39 @@ a.contact-card:hover { background: var(--bg-raised); }
 .reports-grid .report-link { color: var(--text); font-weight: 500; }
 .reports-grid .report-link:hover { color: var(--navy); }
 .reports-grid .ticker { color: var(--muted); }
+
+.member-label {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  color: var(--navy);
+}
+
+.access-open {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.member-notice {
+  position: sticky;
+  top: 96px;
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+  border-left: 3px solid var(--brass);
+  padding: 28px 24px;
+}
+
+.member-notice p {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
 .ag-popup { z-index: 60; }
 
 .download-card {
@@ -1126,7 +1159,7 @@ a.contact-card:hover { background: var(--bg-raised); }
   .services, .tiers, .contact-grid, .facts { grid-template-columns: 1fr; }
   .pillar-row { grid-template-columns: 56px 1fr; }
   .pillar-row p { grid-column: 1 / -1; padding-top: 0; }
-  .download-card { position: static; }
+  .download-card, .member-notice { position: static; }
   .hero { padding-top: 48px; }
   .brand-kicker { display: none; }
 }
