@@ -33,11 +33,11 @@ const theme = themeQuartz.withPart(colorSchemeLight).withParams({
 
 const rows = [
   {
-    title: "CoreWeave: Debt, Rates, and the Data-Center Crossfire",
+    title: "CoreWeave: A Ranked Short",
     ticker: "CRWV",
     href: "/reports/coreweave/",
     category: "AI / Data Centers",
-    date: "2026-10-19",
+    date: "2026-10-20",
     direction: "Short",
   },
 ];
