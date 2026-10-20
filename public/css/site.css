@@ -707,68 +707,27 @@ table.data a:hover { color: var(--brass); }
   position: relative;
   width: 196px;
   height: 196px;
-  border-radius: 50%;
-  padding: 13px;
-  background:
-    radial-gradient(circle at 32% 26%, rgba(255, 243, 196, 0.55), rgba(255, 243, 196, 0) 46%),
-    conic-gradient(
-      from 206deg,
-      #7a5512 0deg,
-      #b8862b 46deg,
-      #d4a537 84deg,
-      #f5d77a 112deg,
-      #fff3c4 136deg,
-      #f5d77a 162deg,
-      #d4a537 198deg,
-      #b8862b 230deg,
-      #7a5512 268deg,
-      #5c3e10 300deg,
-      #b8862b 332deg,
-      #d4a537 352deg,
-      #7a5512 360deg
-    );
-  box-shadow:
-    0 0 0 1px #5a3e10,
-    0 1px 0 rgba(255, 243, 196, 0.75),
-    0 2px 3px rgba(48, 30, 8, 0.18),
-    0 14px 22px rgba(42, 28, 8, 0.26);
 }
 
-.founder-portrait::before {
-  content: "";
+.founder-ring {
   position: absolute;
   inset: 0;
-  border-radius: 50%;
-  padding: 13px;
-  background: linear-gradient(
-    145deg,
-    rgba(255, 243, 196, 0.95) 0%,
-    rgba(245, 215, 122, 0.45) 24%,
-    rgba(255, 255, 255, 0) 46%,
-    rgba(92, 62, 16, 0.28) 74%,
-    rgba(255, 243, 196, 0.28) 100%
-  );
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
   pointer-events: none;
+  filter: drop-shadow(0 6px 7px rgba(62, 36, 8, 0.22));
 }
 
 .founder-portrait-face {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 10px;
   border-radius: 50%;
   overflow: hidden;
   display: grid;
   place-items: center;
   background:
     radial-gradient(circle at 50% 36%, #f6f5f2, #e3e0d8 72%, #d4d0c6);
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 243, 196, 0.72),
-    inset 0 0 0 2px rgba(90, 58, 12, 0.42),
-    inset 0 7px 12px rgba(48, 30, 8, 0.42);
 }
 
 .founder-portrait-face img {
@@ -1098,7 +1057,16 @@ a.contact-card:hover { background: var(--bg-raised); }
 
 .reports-grid { width: 100%; min-height: 280px; }
 .reports-grid .ag-row { cursor: pointer; }
-.reports-grid .ag-cell { line-height: 1.35; }
+.reports-grid .ag-cell {
+  display: flex;
+  align-items: center;
+  line-height: 1.35;
+}
+.reports-grid .ag-cell-wrapper,
+.reports-grid .ag-cell-value {
+  display: flex;
+  align-items: center;
+}
 .reports-grid .report-link { color: var(--text); font-weight: 500; }
 .reports-grid .report-link:hover { color: var(--navy); }
 .reports-grid .ticker { color: var(--muted); margin-right: 0; }

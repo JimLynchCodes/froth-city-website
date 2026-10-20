@@ -137,7 +137,9 @@ if (host) {
         maxWidth: 84,
         flex: 0,
         pinned: narrow ? "left" : null,
-        filter: "agTextColumnFilter",
+        filter: false,
+        suppressHeaderFilterButton: true,
+        suppressHeaderMenuButton: true,
         cellClass: "ticker-cell",
         cellRenderer: (params) => {
           const link = document.createElement("a");
@@ -150,12 +152,12 @@ if (host) {
       {
         headerName: "Title",
         field: "title",
-        width: 300,
-        minWidth: narrow ? 180 : 300,
+        width: 440,
+        minWidth: 440,
         flex: 1,
         filter: "agTextColumnFilter",
-        wrapText: true,
-        autoHeight: true,
+        wrapText: false,
+        autoHeight: false,
         cellRenderer: (params) => {
           const link = document.createElement("a");
           link.href = params.data.href;
@@ -165,21 +167,21 @@ if (host) {
         },
       },
       {
-        headerName: "Category",
+        headerName: "Industry",
         field: "category",
-        width: narrow ? 120 : 156,
-        minWidth: narrow ? 108 : 140,
+        width: narrow ? 112 : 136,
+        minWidth: narrow ? 104 : 128,
         flex: 0,
         filter: "agTextColumnFilter",
         wrapText: true,
         autoHeight: true,
       },
       {
-        headerName: "Date Published",
+        headerName: "Published",
         colId: "date",
-        width: narrow ? 108 : 118,
-        minWidth: narrow ? 100 : 110,
-        maxWidth: 130,
+        width: narrow ? 102 : 112,
+        minWidth: narrow ? 96 : 104,
+        maxWidth: 124,
         flex: 0,
         filter: "agDateColumnFilter",
         sort: "desc",
@@ -215,8 +217,8 @@ if (host) {
       {
         headerName: "Access",
         field: "access",
-        width: narrow ? 128 : 148,
-        minWidth: narrow ? 120 : 135,
+        width: narrow ? 120 : 138,
+        minWidth: narrow ? 112 : 128,
         flex: 0,
         wrapText: true,
         autoHeight: true,
