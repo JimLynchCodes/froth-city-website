@@ -3,7 +3,14 @@
   "private": true,
   "description": "Froth City Research — static website",
   "scripts": {
-    "dev": "npx --yes serve .",
-    "start": "npx --yes serve ."
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "ag-grid-community": "^36.2.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.4"
   }
 }
