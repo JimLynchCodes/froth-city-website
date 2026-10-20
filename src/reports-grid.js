@@ -152,8 +152,8 @@ if (host) {
       {
         headerName: "Title",
         field: "title",
-        width: 440,
-        minWidth: 440,
+        width: 432,
+        minWidth: 432,
         flex: 1,
         filter: "agTextColumnFilter",
         wrapText: false,
@@ -169,8 +169,8 @@ if (host) {
       {
         headerName: "Industry",
         field: "category",
-        width: narrow ? 112 : 136,
-        minWidth: narrow ? 104 : 128,
+        width: narrow ? 120 : 150,
+        minWidth: narrow ? 112 : 150,
         flex: 0,
         filter: "agTextColumnFilter",
         wrapText: true,
@@ -179,9 +179,8 @@ if (host) {
       {
         headerName: "Published",
         colId: "date",
-        width: narrow ? 102 : 112,
-        minWidth: narrow ? 96 : 104,
-        maxWidth: 124,
+        width: narrow ? 132 : 150,
+        minWidth: narrow ? 128 : 150,
         flex: 0,
         filter: "agDateColumnFilter",
         sort: "desc",
@@ -201,9 +200,8 @@ if (host) {
       {
         headerName: "Direction",
         field: "direction",
-        width: narrow ? 88 : 96,
-        minWidth: narrow ? 84 : 90,
-        maxWidth: 110,
+        width: narrow ? 120 : 135,
+        minWidth: narrow ? 116 : 135,
         flex: 0,
         filter: "agTextColumnFilter",
         cellRenderer: (params) => {
@@ -217,8 +215,8 @@ if (host) {
       {
         headerName: "Access",
         field: "access",
-        width: narrow ? 120 : 138,
-        minWidth: narrow ? 112 : 128,
+        width: narrow ? 168 : 210,
+        minWidth: narrow ? 160 : 208,
         flex: 0,
         wrapText: true,
         autoHeight: true,
