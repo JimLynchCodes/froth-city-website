@@ -124,43 +124,63 @@ if (host) {
       sortable: true,
       filter: true,
       resizable: true,
-      minWidth: 120,
       suppressHeaderMenuButton: false,
+      wrapHeaderText: true,
+      autoHeaderHeight: true,
     },
     columnDefs: [
       {
+        headerName: "Ticker",
+        field: "ticker",
+        width: narrow ? 64 : 72,
+        minWidth: narrow ? 64 : 72,
+        maxWidth: 84,
+        flex: 0,
+        pinned: narrow ? "left" : null,
+        filter: "agTextColumnFilter",
+        cellClass: "ticker-cell",
+        cellRenderer: (params) => {
+          const link = document.createElement("a");
+          link.href = params.data.href;
+          link.className = "ticker";
+          link.textContent = params.value;
+          return link;
+        },
+      },
+      {
         headerName: "Title",
         field: "title",
-        flex: 2,
-        minWidth: narrow ? 210 : 280,
-        pinned: narrow ? "left" : null,
+        width: 300,
+        minWidth: narrow ? 180 : 300,
+        flex: 1,
         filter: "agTextColumnFilter",
         wrapText: true,
         autoHeight: true,
-        getQuickFilterText: (params) => `${params.data.ticker} ${params.data.title}`,
         cellRenderer: (params) => {
           const link = document.createElement("a");
           link.href = params.data.href;
           link.className = "report-link";
-          const ticker = document.createElement("span");
-          ticker.className = "ticker";
-          ticker.textContent = params.data.ticker;
-          link.append(ticker, document.createTextNode(params.data.title));
+          link.textContent = params.value;
           return link;
         },
       },
       {
         headerName: "Category",
         field: "category",
-        flex: 1,
-        minWidth: 160,
+        width: narrow ? 120 : 156,
+        minWidth: narrow ? 108 : 140,
+        flex: 0,
         filter: "agTextColumnFilter",
+        wrapText: true,
+        autoHeight: true,
       },
       {
         headerName: "Date Published",
         colId: "date",
-        flex: 1,
-        minWidth: 150,
+        width: narrow ? 108 : 118,
+        minWidth: narrow ? 100 : 110,
+        maxWidth: 130,
+        flex: 0,
         filter: "agDateColumnFilter",
         sort: "desc",
         valueGetter: (params) => dateValue(params.data.date),
@@ -179,8 +199,10 @@ if (host) {
       {
         headerName: "Direction",
         field: "direction",
-        minWidth: 130,
-        maxWidth: 160,
+        width: narrow ? 88 : 96,
+        minWidth: narrow ? 84 : 90,
+        maxWidth: 110,
+        flex: 0,
         filter: "agTextColumnFilter",
         cellRenderer: (params) => {
           const label = document.createElement("span");
@@ -193,8 +215,9 @@ if (host) {
       {
         headerName: "Access",
         field: "access",
-        flex: 1.2,
-        minWidth: 220,
+        width: narrow ? 128 : 148,
+        minWidth: narrow ? 120 : 135,
+        flex: 0,
         wrapText: true,
         autoHeight: true,
         filter: "agTextColumnFilter",
