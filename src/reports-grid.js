@@ -33,28 +33,58 @@ const theme = themeQuartz.withPart(colorSchemeLight).withParams({
 
 const rows = [
   {
-    title: "Uranium: The Fuel Works. The Equity Has to Wait",
-    ticker: "URN",
-    href: "/reports/uranium/",
-    category: "Uranium / Nuclear",
-    date: "2026-10-20",
+    title: "Six Flags: The Business of Fun Isn't Much Fun",
+    ticker: "FUN",
+    href: "/reports/six-flags/",
+    category: "Leisure / Theme Parks",
+    date: "2026-10-12",
     direction: "Short",
+    access: "Members only until Nov 12, 2026",
   },
   {
     title: "Oracle: The Software Franchise Is Funding the Build",
     ticker: "ORCL",
     href: "/reports/oracle/",
     category: "AI / Data Centers",
-    date: "2026-10-20",
+    date: "2026-09-21",
     direction: "Short",
+    access: "Available",
+  },
+  {
+    title: "Uranium: The Fuel Works. The Equity Has to Wait",
+    ticker: "URN",
+    href: "/reports/uranium/",
+    category: "Uranium / Nuclear",
+    date: "2026-09-07",
+    direction: "Short",
+    access: "Available",
   },
   {
     title: "CoreWeave: A Ranked Short",
     ticker: "CRWV",
     href: "/reports/coreweave/",
     category: "AI / Data Centers",
-    date: "2026-10-20",
+    date: "2026-08-24",
     direction: "Short",
+    access: "Available",
+  },
+  {
+    title: "WW International: A Smaller Loan on a Shrinking Business",
+    ticker: "WW",
+    href: "/reports/ww/",
+    category: "Consumer / Weight Loss",
+    date: "2026-06-08",
+    direction: "Short",
+    access: "Available",
+  },
+  {
+    title: "Uniti: The REIT Ended. The Debt Did Not.",
+    ticker: "UNIT",
+    href: "/reports/uniti/",
+    category: "Telecom / Fiber",
+    date: "2026-05-18",
+    direction: "Short",
+    access: "Available",
   },
 ];
 
@@ -157,6 +187,22 @@ if (host) {
           const long = params.value === "Long";
           label.className = `dir ${long ? "dir-long" : "dir-short"}`;
           label.textContent = `${long ? "▲" : "▼"} ${params.value}`;
+          return label;
+        },
+      },
+      {
+        headerName: "Access",
+        field: "access",
+        flex: 1.2,
+        minWidth: 220,
+        wrapText: true,
+        autoHeight: true,
+        filter: "agTextColumnFilter",
+        cellRenderer: (params) => {
+          const label = document.createElement("span");
+          const members = params.value && params.value.startsWith("Members only");
+          label.className = members ? "member-label" : "access-open";
+          label.textContent = params.value || "";
           return label;
         },
       },
