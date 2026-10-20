@@ -1016,7 +1016,7 @@ a.contact-card:hover { background: var(--bg-raised); }
 }
 
 .download-card .agree {
-  margin-top: 104px;
+  margin: 25px 0;
 }
 
 .agree input {
