@@ -2,6 +2,10 @@
 
 Static website for Froth City Research, an independent equity research firm based in Battery Park, Manhattan. Pages are HTML. Vite bundles the reports table and copies everything else into a static `dist/` folder. There is no application server at runtime.
 
+See the live site: https://froth-city.netlify.app/
+
+---
+
 ## Run locally
 
 From the repository root:
