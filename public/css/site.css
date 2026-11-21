@@ -1243,7 +1243,7 @@ table.note caption { caption-side: bottom; padding-top: 8px; text-align: left; f
 .print-mast { display: none; }
 
 @media print {
-  .utility, .site-header, .site-footer, .download-card, .skip, .back, .nav-check, .mobile-drawer { display: none !important; }
+  .utility, .site-header, .site-footer, .download-card, .member-notice, .skip, .back, .nav-check, .mobile-drawer { display: none !important; }
   body { background: #fff; color: #1c2430; font-size: 11pt; }
   .page { padding: 0; }
   .wrap { width: auto; }

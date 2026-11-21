@@ -1,5 +1,8 @@
+import { applyAccess } from "./access-dates.mjs";
+
 function initDownloads() {
   document.querySelectorAll("[data-pdf]").forEach((panel) => {
+    if (panel.hasAttribute("hidden")) return;
     const pdf = panel.getAttribute("data-pdf");
     const filename = panel.getAttribute("data-filename");
     const box = panel.querySelector("[data-agree]");
@@ -83,6 +86,7 @@ function initHeader() {
   window.addEventListener("scroll", onScroll, { passive: true });
 }
 
+applyAccess(document);
 initDownloads();
 initMenus();
 initYear();
