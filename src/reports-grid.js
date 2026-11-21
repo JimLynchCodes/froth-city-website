@@ -34,6 +34,14 @@ const theme = themeQuartz.withPart(colorSchemeLight).withParams({
 
 const rows = [
   {
+    title: "The Bullish Case for Memory: Micron, SK Hynix, and SanDisk",
+    ticker: "MU",
+    href: "/reports/memory/",
+    category: "Semiconductors / Memory",
+    date: "2026-11-21",
+    direction: "Long",
+  },
+  {
     title: "Lucid Group: The Cars Still Cost More Than They Sell For",
     ticker: "LCID",
     href: "/reports/lucid/",

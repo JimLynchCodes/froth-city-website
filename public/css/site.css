@@ -672,6 +672,15 @@ table.data a:hover { color: var(--brass); }
 .dir-long { color: var(--long); }
 .dir-short { color: var(--short); }
 
+.disclosure {
+  margin-top: 22px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  background: #f7f6f3;
+}
+.disclosure p { margin-top: 8px; font-size: 0.95rem; color: var(--text); }
+.disclosure p:first-child { margin-top: 0; }
+
 .weekly { margin-top: 72px; background: var(--cream); color: var(--cream-ink); }
 
 .weekly-inner {
