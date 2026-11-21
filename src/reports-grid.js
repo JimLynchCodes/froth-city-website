@@ -5,6 +5,7 @@ import {
   createGrid,
   themeQuartz,
 } from "ag-grid-community";
+import { accessLabel } from "./access-dates.mjs";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
@@ -33,13 +34,20 @@ const theme = themeQuartz.withPart(colorSchemeLight).withParams({
 
 const rows = [
   {
+    title: "Lucid Group: The Cars Still Cost More Than They Sell For",
+    ticker: "LCID",
+    href: "/reports/lucid/",
+    category: "Autos / Electric Vehicles",
+    date: "2026-11-21",
+    direction: "Short",
+  },
+  {
     title: "Six Flags: The Business of Fun Isn't Much Fun",
     ticker: "FUN",
     href: "/reports/six-flags/",
     category: "Leisure / Theme Parks",
     date: "2026-10-12",
     direction: "Short",
-    access: "Members only until Nov 12, 2026",
   },
   {
     title: "Oracle: The Software Franchise Is Funding the Build",
@@ -48,7 +56,6 @@ const rows = [
     category: "AI / Data Centers",
     date: "2026-09-21",
     direction: "Short",
-    access: "Available",
   },
   {
     title: "Uranium: The Fuel Works. The Equity Has to Wait",
@@ -57,7 +64,6 @@ const rows = [
     category: "Uranium / Nuclear",
     date: "2026-09-07",
     direction: "Short",
-    access: "Available",
   },
   {
     title: "CoreWeave: A Ranked Short",
@@ -66,7 +72,6 @@ const rows = [
     category: "AI / Data Centers",
     date: "2026-08-24",
     direction: "Short",
-    access: "Available",
   },
   {
     title: "WW International: A Smaller Loan on a Shrinking Business",
@@ -75,7 +80,6 @@ const rows = [
     category: "Consumer / Weight Loss",
     date: "2026-06-08",
     direction: "Short",
-    access: "Available",
   },
   {
     title: "Uniti: The REIT Ended. The Debt Did Not.",
@@ -84,7 +88,6 @@ const rows = [
     category: "Telecom / Fiber",
     date: "2026-05-18",
     direction: "Short",
-    access: "Available",
   },
 ];
 
@@ -215,17 +218,18 @@ if (host) {
       {
         headerName: "Access",
         field: "access",
-        width: narrow ? 168 : 210,
-        minWidth: narrow ? 160 : 208,
+        width: narrow ? 180 : 248,
+        minWidth: narrow ? 168 : 230,
         flex: 0,
         wrapText: true,
         autoHeight: true,
         filter: "agTextColumnFilter",
+        valueGetter: (params) => accessLabel(params.data.date),
         cellRenderer: (params) => {
           const label = document.createElement("span");
-          const members = params.value && params.value.startsWith("Members only");
-          label.className = members ? "member-label" : "access-open";
-          label.textContent = params.value || "";
+          const text = params.value || "";
+          label.className = text === "Available" ? "access-open" : "member-label";
+          label.textContent = text;
           return label;
         },
       },
