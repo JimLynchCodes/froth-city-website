@@ -1,0 +1,74 @@
+{
+  "weeks": [
+    {
+      "weekOf": "2026-11-23",
+      "example": false,
+      "long": [
+        {
+          "sector": "Memory",
+          "etf": "DRAM",
+          "tickers": ["KMEM", "MU", "SNDK", "SK Hynix"],
+          "thesis": "The multiples are low and the profits are already there. Wait for this selloff to turn back up before you buy.",
+          "report": "/reports/memory/",
+          "reportLabel": "Read the memory note."
+        },
+        {
+          "sector": "Safety / low volatility",
+          "etf": "LVHD",
+          "tickers": ["KBWP", "SPLV", "XLP"],
+          "thesis": "Safety could be the next memecoin. Low volatility and staples should hold up if the AI trade cracks."
+        },
+        {
+          "sector": "Healthcare",
+          "etf": "XLV",
+          "thesis": "Healthcare is where the jobs are. Demand stays steady whether or not the AI cycle does."
+        },
+        {
+          "sector": "Financials",
+          "etf": "XLF",
+          "tickers": ["BAC", "BLK"],
+          "thesis": "Banks and asset managers are not very exposed to the AI trade. They should keep making steady profits whether or not it falls apart."
+        },
+        {
+          "sector": "Bonds / cash-like",
+          "etf": "SGOV",
+          "tickers": ["TLT"],
+          "thesis": "When you are more likely to lose money than make it, there is no shame in parking money for a while in liquid bond ETFs."
+        }
+      ],
+      "short": [
+        {
+          "sector": "Data center buildout",
+          "tickers": ["CRWV", "WULF", "IREN", "NBIS"],
+          "thesis": "Debt-heavy builders such as CoreWeave and TeraWulf are the most at risk. Even lower-debt names such as IREN and Nebius look extremely overvalued, and the backstops under this buildout are on shaky ground.",
+          "report": "/reports/coreweave/",
+          "reportLabel": "Read the CoreWeave note."
+        },
+        {
+          "sector": "Crypto miners turned AI data centers",
+          "tickers": ["CIFR", "MARA"],
+          "thesis": "Failed miners pivoting to AI hosting carry the buildout risk without the track record."
+        },
+        {
+          "sector": "Hyperscalers",
+          "tickers": ["ORCL"],
+          "thesis": "Capex is too high, and the earnings growth showing up now does not look sustainable. Oracle is the debt-heavy one.",
+          "report": "/reports/oracle/",
+          "reportLabel": "Read the Oracle note."
+        },
+        {
+          "sector": "Autos",
+          "tickers": ["LCID", "GT", "RILY"],
+          "thesis": "The short is the debt-heavy side of autos: manufacturers, parts, anything in that chain.",
+          "report": "/reports/lucid/",
+          "reportLabel": "Read the Lucid note."
+        },
+        {
+          "sector": "Housing tech",
+          "tickers": ["OPEN", "OPAD"],
+          "thesis": "A big slowdown in home sales hits iBuyers and housing tech the hardest."
+        }
+      ]
+    }
+  ]
+}

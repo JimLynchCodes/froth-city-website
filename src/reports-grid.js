@@ -5,7 +5,9 @@ import {
   createGrid,
   themeQuartz,
 } from "ag-grid-community";
-import { accessLabel } from "./access-dates.mjs";
+import catalog from "./data/reports.json";
+import { accessText } from "./access-policy.mjs";
+import { sessionState } from "./session.js";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
@@ -32,72 +34,14 @@ const theme = themeQuartz.withPart(colorSchemeLight).withParams({
   spacing: 8,
 });
 
-const rows = [
-  {
-    title: "The Bullish Case for Memory: Micron, SK Hynix, and SanDisk",
-    ticker: "MU",
-    href: "/reports/memory/",
-    category: "Semiconductors / Memory",
-    date: "2026-11-22",
-    direction: "Long",
-  },
-  {
-    title: "Lucid Group: The Cars Still Cost More Than They Sell For",
-    ticker: "LCID",
-    href: "/reports/lucid/",
-    category: "Autos / Electric Vehicles",
-    date: "2026-11-21",
-    direction: "Short",
-  },
-  {
-    title: "Six Flags: The Business of Fun Isn't Much Fun",
-    ticker: "FUN",
-    href: "/reports/six-flags/",
-    category: "Leisure / Theme Parks",
-    date: "2026-10-12",
-    direction: "Short",
-  },
-  {
-    title: "Oracle: The Software Franchise Is Funding the Build",
-    ticker: "ORCL",
-    href: "/reports/oracle/",
-    category: "AI / Data Centers",
-    date: "2026-09-21",
-    direction: "Short",
-  },
-  {
-    title: "Uranium: The Fuel Works. The Equity Has to Wait",
-    ticker: "URN",
-    href: "/reports/uranium/",
-    category: "Uranium / Nuclear",
-    date: "2026-09-07",
-    direction: "Short",
-  },
-  {
-    title: "CoreWeave: A Ranked Short",
-    ticker: "CRWV",
-    href: "/reports/coreweave/",
-    category: "AI / Data Centers",
-    date: "2026-08-24",
-    direction: "Short",
-  },
-  {
-    title: "WW International: A Smaller Loan on a Shrinking Business",
-    ticker: "WW",
-    href: "/reports/ww/",
-    category: "Consumer / Weight Loss",
-    date: "2026-06-08",
-    direction: "Short",
-  },
-  {
-    title: "Uniti: The REIT Ended. The Debt Did Not.",
-    ticker: "UNIT",
-    href: "/reports/uniti/",
-    category: "Telecom / Fiber",
-    date: "2026-05-18",
-    direction: "Short",
-  },
-];
+const rows = catalog.map((report) => ({
+  title: report.title,
+  ticker: report.ticker,
+  href: report.href,
+  category: report.industry,
+  date: report.published,
+  direction: report.direction === "long" ? "Long" : "Short",
+}));
 
 function formatDate(iso) {
   const [year, month, day] = iso.split("-").map(Number);
@@ -232,11 +176,11 @@ if (host) {
         wrapText: true,
         autoHeight: true,
         filter: "agTextColumnFilter",
-        valueGetter: (params) => accessLabel(params.data.date),
+        valueGetter: (params) => accessText(params.data.date, sessionState.tier),
         cellRenderer: (params) => {
           const label = document.createElement("span");
           const text = params.value || "";
-          label.className = text === "Available" ? "access-open" : "member-label";
+          label.className = text.startsWith("Available to members") ? "member-label" : "access-open";
           label.textContent = text;
           return label;
         },
@@ -265,4 +209,7 @@ if (host) {
   const refresh = () => gridApi.onFilterChanged();
   if (categoryEl) categoryEl.addEventListener("change", refresh);
   if (directionEl) directionEl.addEventListener("change", refresh);
+  window.addEventListener("froth-session", () => {
+    gridApi.refreshCells({ force: true });
+  });
 }

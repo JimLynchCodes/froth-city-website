@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "memory",
+    "title": "The Bullish Case for Memory: Micron, SK Hynix, and SanDisk",
+    "ticker": "MU",
+    "tickers": ["MU", "000660.KS", "SNDK"],
+    "industry": "Semiconductors / Memory",
+    "direction": "long",
+    "published": "2026-11-22",
+    "pdfPath": "memory.pdf",
+    "pdfFilename": "The-Bullish-Case-for-Memory-Micron-SK-Hynix-and-SanDisk.pdf",
+    "href": "/reports/memory/"
+  },
+  {
+    "slug": "lucid",
+    "title": "Lucid Group: The Cars Still Cost More Than They Sell For",
+    "ticker": "LCID",
+    "tickers": ["LCID"],
+    "industry": "Autos / Electric Vehicles",
+    "direction": "short",
+    "published": "2026-11-21",
+    "pdfPath": "lucid.pdf",
+    "pdfFilename": "Lucid-Group-The-Cars-Still-Cost-More-Than-They-Sell-For.pdf",
+    "href": "/reports/lucid/"
+  },
+  {
+    "slug": "six-flags",
+    "title": "Six Flags: The Business of Fun Isn't Much Fun",
+    "ticker": "FUN",
+    "tickers": ["FUN"],
+    "industry": "Leisure / Theme Parks",
+    "direction": "short",
+    "published": "2026-10-12",
+    "pdfPath": "six-flags.pdf",
+    "pdfFilename": "Six-Flags-The-Business-of-Fun-Isnt-Much-Fun.pdf",
+    "href": "/reports/six-flags/"
+  },
+  {
+    "slug": "oracle",
+    "title": "Oracle: The Software Franchise Is Funding the Build",
+    "ticker": "ORCL",
+    "tickers": ["ORCL"],
+    "industry": "AI / Data Centers",
+    "direction": "short",
+    "published": "2026-09-21",
+    "pdfPath": "oracle.pdf",
+    "pdfFilename": "Oracle-The-Software-Franchise-Is-Funding-the-Build.pdf",
+    "href": "/reports/oracle/"
+  },
+  {
+    "slug": "uranium",
+    "title": "Uranium: The Fuel Works. The Equity Has to Wait",
+    "ticker": "URN",
+    "tickers": ["URN"],
+    "industry": "Uranium / Nuclear",
+    "direction": "short",
+    "published": "2026-09-07",
+    "pdfPath": "uranium.pdf",
+    "pdfFilename": "Uranium-The-Fuel-Works-The-Equity-Has-to-Wait.pdf",
+    "href": "/reports/uranium/"
+  },
+  {
+    "slug": "coreweave",
+    "title": "CoreWeave: A Ranked Short",
+    "ticker": "CRWV",
+    "tickers": ["CRWV"],
+    "industry": "AI / Data Centers",
+    "direction": "short",
+    "published": "2026-08-24",
+    "pdfPath": "coreweave.pdf",
+    "pdfFilename": "CoreWeave-A-Ranked-Short.pdf",
+    "href": "/reports/coreweave/"
+  },
+  {
+    "slug": "ww",
+    "title": "WW International: A Smaller Loan on a Shrinking Business",
+    "ticker": "WW",
+    "tickers": ["WW"],
+    "industry": "Consumer / Weight Loss",
+    "direction": "short",
+    "published": "2026-06-08",
+    "pdfPath": "ww.pdf",
+    "pdfFilename": "WW-International-A-Smaller-Loan-on-a-Shrinking-Business.pdf",
+    "href": "/reports/ww/"
+  },
+  {
+    "slug": "uniti",
+    "title": "Uniti: The REIT Ended. The Debt Did Not.",
+    "ticker": "UNIT",
+    "tickers": ["UNIT"],
+    "industry": "Telecom / Fiber",
+    "direction": "short",
+    "published": "2026-05-18",
+    "pdfPath": "uniti.pdf",
+    "pdfFilename": "Uniti-The-REIT-Ended-The-Debt-Did-Not.pdf",
+    "href": "/reports/uniti/"
+  }
+]
