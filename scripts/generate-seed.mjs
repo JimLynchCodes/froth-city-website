@@ -9,6 +9,11 @@ function sqlText(value) {
   return `'${String(value).replaceAll("'", "''")}'`;
 }
 
+function sqlArray(values) {
+  if (!values || values.length === 0) return "array[]::text[]";
+  return `array[${values.map((value) => sqlText(value)).join(", ")}]::text[]`;
+}
+
 export function buildSeed() {
   const reports = JSON.parse(readFileSync(resolve(root, "src/data/reports.json"), "utf8"));
   const weekly = JSON.parse(readFileSync(resolve(root, "src/data/weekly-5-5.json"), "utf8"));
@@ -38,7 +43,9 @@ export function buildSeed() {
           String(index + 1),
           sqlText(item.sector),
           sqlText(item.etf || null),
+          sqlArray(item.tickers),
           sqlText(item.thesis),
+          sqlText(item.report || null),
           week.example ? "true" : "false",
         ].join(", ")})`);
       });
@@ -57,7 +64,7 @@ insert into public.reports (
 ${reportRows.join(",\n")};
 
 insert into public.weekly_5_5 (
-  week_of, side, position, sector, etf, thesis, example
+  week_of, side, position, sector, etf, tickers, thesis, report_href, example
 ) values
 ${weekRows.join(",\n")};
 `;

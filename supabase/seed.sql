@@ -17,7 +17,15 @@ insert into public.reports (
 ('uniti', 'Uniti: The REIT Ended. The Debt Did Not.', 'UNIT', array['UNIT']::text[], 'Telecom / Fiber', 'short', '2026-05-18', 'uniti.pdf', 'Uniti-The-REIT-Ended-The-Debt-Did-Not.pdf', '/reports/uniti/');
 
 insert into public.weekly_5_5 (
-  week_of, side, position, sector, etf, thesis, example
+  week_of, side, position, sector, etf, tickers, thesis, report_href, example
 ) values
-('2026-11-16', 'long', 1, 'Example sector', 'XLE', 'Placeholder only. Replace this row with a real sector before publishing.', true),
-('2026-11-16', 'short', 1, 'Example sector', 'XLU', 'Placeholder only. Replace this row with a real sector before publishing.', true);
+('2026-11-23', 'long', 1, 'Memory', 'DRAM', array['KMEM', 'MU', 'SNDK', 'SK Hynix']::text[], 'The multiples are low and the profits are already there. Wait for this selloff to turn back up before you buy.', '/reports/memory/', false),
+('2026-11-23', 'long', 2, 'Safety / low volatility', 'LVHD', array['KBWP', 'SPLV', 'XLP']::text[], 'Safety could be the next memecoin. Low volatility and staples should hold up if the AI trade cracks.', null, false),
+('2026-11-23', 'long', 3, 'Healthcare', 'XLV', array[]::text[], 'Healthcare is where the jobs are. Demand stays steady whether or not the AI cycle does.', null, false),
+('2026-11-23', 'long', 4, 'Financials', 'XLF', array['BAC', 'BLK']::text[], 'Banks and asset managers are not very exposed to the AI trade. They should keep making steady profits whether or not it falls apart.', null, false),
+('2026-11-23', 'long', 5, 'Bonds / cash-like', 'SGOV', array['TLT']::text[], 'When you are more likely to lose money than make it, there is no shame in parking money for a while in liquid bond ETFs.', null, false),
+('2026-11-23', 'short', 1, 'Data center buildout', null, array['CRWV', 'WULF', 'IREN', 'NBIS']::text[], 'Debt-heavy builders such as CoreWeave and TeraWulf are the most at risk. Even lower-debt names such as IREN and Nebius look extremely overvalued, and the backstops under this buildout are on shaky ground.', '/reports/coreweave/', false),
+('2026-11-23', 'short', 2, 'Crypto miners turned AI data centers', null, array['CIFR', 'MARA']::text[], 'Failed miners pivoting to AI hosting carry the buildout risk without the track record.', null, false),
+('2026-11-23', 'short', 3, 'Hyperscalers', null, array['ORCL']::text[], 'Capex is too high, and the earnings growth showing up now does not look sustainable. Oracle is the debt-heavy one.', '/reports/oracle/', false),
+('2026-11-23', 'short', 4, 'Autos', null, array['LCID', 'GT', 'RILY']::text[], 'The short is the debt-heavy side of autos: manufacturers, parts, anything in that chain.', '/reports/lucid/', false),
+('2026-11-23', 'short', 5, 'Housing tech', null, array['OPEN', 'OPAD']::text[], 'A big slowdown in home sales hits iBuyers and housing tech the hardest.', null, false);

@@ -47,6 +47,26 @@ test("weekly sectors stay hidden until the free date unless the tier is paid", (
   assert.equal(member.current.long[0].sector, "Hidden sector");
 });
 
+test("the November 23 week stays members-only until December 23", () => {
+  assert.equal(freeDateISO("2026-11-23"), "2026-12-23");
+  const weeks = [
+    {
+      weekOf: "2026-11-23",
+      example: false,
+      long: [{ sector: "Memory", thesis: "secret" }],
+      short: [],
+    },
+  ];
+  const reader = weekView(weeks, "reader", "2026-11-23");
+  assert.equal(reader.current.locked, true);
+  assert.deepEqual(reader.current.long, []);
+  const member = weekView(weeks, "subscriber", "2026-11-23");
+  assert.equal(member.current.locked, false);
+  assert.equal(member.current.long[0].sector, "Memory");
+  const later = weekView(weeks, null, "2026-12-23");
+  assert.equal(later.current.locked, false);
+});
+
 test("an example week is not treated as the live list", () => {
   const model = weekView(
     [{ weekOf: "2026-11-16", example: true, label: "Example week, not a recommendation", long: [], short: [] }],

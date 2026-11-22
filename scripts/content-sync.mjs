@@ -49,7 +49,9 @@ for (const week of weekly.weeks) {
         position: index + 1,
         sector: item.sector,
         etf: item.etf || null,
+        tickers: item.tickers || [],
         thesis: item.thesis,
+        report_href: item.report || null,
         example: Boolean(week.example),
       });
     });

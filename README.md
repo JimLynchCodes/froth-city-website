@@ -58,11 +58,11 @@ PDF gating is real on a build that has `VITE_SUPABASE_URL` and `VITE_SUPABASE_AN
 
 ## Weekly 5/5
 
-`/weekly-5-5/` is five sectors long and five sectors short. The file `src/data/weekly-5-5.json` currently holds one example week marked "Example week, not a recommendation". The page shows an empty state for the live list and shows that example so the layout is visible. The example is hidden once a real week exists.
+`/weekly-5-5/` is five sectors long and five sectors short. `src/data/weekly-5-5.json` holds the week of November 23, 2026, with `example` set to false. That week is for Subscriber and Premium members until December 23, 2026, one calendar month after its Monday. An `example: true` week, if you add one again, is shown as a placeholder and is hidden once a real week exists.
 
 To publish a week:
 
-1. Edit `src/data/weekly-5-5.json`. Add an object with `weekOf` (the Monday), `example: false`, and `long` and `short` arrays of up to five items (`sector`, `etf`, `thesis`). Leave the example week in the file or remove it.
+1. Edit `src/data/weekly-5-5.json`. Add an object with `weekOf` (the Monday), `example: false`, and `long` and `short` arrays of up to five items. Each item has `sector`, an optional primary `etf`, an optional `tickers` array for further ETFs or stocks, `thesis`, and an optional `report` path when a note on the site matches.
 2. Run `npm run db:seed` so `supabase/seed.sql` matches.
 3. If this deployment has no Supabase keys, the next build reads the JSON and you are done.
 4. If Supabase is on, the site reads the table, not the JSON bundle. Run `npm run content:sync` with `SUPABASE_SERVICE_ROLE_KEY` in `.env.local`, or paste the new `insert` statements into the Supabase SQL editor. Do not put the service role key in Netlify or in a `VITE_` variable.

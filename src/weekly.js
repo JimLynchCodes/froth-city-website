@@ -7,7 +7,10 @@ function entry(row) {
   return {
     sector: row.sector,
     etf: row.etf || "",
+    tickers: Array.isArray(row.tickers) ? row.tickers : [],
     thesis: row.thesis,
+    report: row.report || "",
+    reportLabel: row.reportLabel || "",
   };
 }
 
@@ -37,7 +40,7 @@ async function loadRemoteWeeks() {
   const supabase = getSupabase();
   const [{ data: dates, error: dateError }, { data: rows, error: rowError }] = await Promise.all([
     supabase.rpc("weekly_week_dates"),
-    supabase.from("weekly_5_5").select("week_of, side, position, sector, etf, thesis, example").order("position"),
+    supabase.from("weekly_5_5").select("week_of, side, position, sector, etf, tickers, thesis, example, report_href").order("position"),
   ]);
   if (dateError) throw dateError;
   if (rowError) throw rowError;
@@ -46,7 +49,9 @@ async function loadRemoteWeeks() {
     side: row.side,
     sector: row.sector,
     etf: row.etf,
+    tickers: row.tickers || [],
     thesis: row.thesis,
+    report: row.report_href || "",
     example: row.example,
     label: row.example ? "Example week, not a recommendation" : "",
   }));
@@ -90,7 +95,10 @@ async function loadWeeks() {
           side,
           sector: item.sector,
           etf: item.etf,
+          tickers: item.tickers || [],
           thesis: item.thesis,
+          report: item.report || "",
+          reportLabel: item.reportLabel || "",
           example: Boolean(week.example),
           label: week.label || "",
         });
@@ -106,8 +114,12 @@ function sectorList(items) {
   }
   return `<ol class="sector-list">${items
     .map((item) => {
-      const etf = item.etf ? `<span class="ticker">${escapeHtml(item.etf)}</span>` : "";
-      return `<li><p class="sector-name">${escapeHtml(item.sector)} ${etf}</p><p>${escapeHtml(item.thesis)}</p></li>`;
+      const symbols = [item.etf, ...(item.tickers || [])].filter((symbol, index, all) => symbol && all.indexOf(symbol) === index);
+      const chips = symbols.map((symbol) => `<span class="ticker">${escapeHtml(symbol)}</span>`).join(" ");
+      const link = item.report
+        ? ` <a href="${escapeHtml(item.report)}">${escapeHtml(item.reportLabel || "Read the note.")}</a>`
+        : "";
+      return `<li><p class="sector-name">${escapeHtml(item.sector)} ${chips}</p><p>${escapeHtml(item.thesis)}${link}</p></li>`;
     })
     .join("")}</ol>`;
 }
