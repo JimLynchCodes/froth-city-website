@@ -1,13 +1,23 @@
 {
   "name": "froth-city",
   "private": true,
-  "description": "Froth City Research — static website",
+  "type": "module",
+  "description": "Froth City Research static website",
   "scripts": {
     "dev": "vite",
+    "dev:supabase": "node scripts/dev-supabase.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "prebuild": "node scripts/generate-seed.mjs",
+    "preview": "vite preview",
+    "test": "node --test",
+    "db:seed": "node scripts/generate-seed.mjs",
+    "db:start": "npx supabase start",
+    "db:reset": "node scripts/generate-seed.mjs && npx supabase db reset",
+    "content:sync": "node scripts/content-sync.mjs",
+    "storage:upload": "node scripts/upload-pdfs.mjs"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.119.2",
     "ag-grid-community": "^36.2.0"
   },
   "devDependencies": {

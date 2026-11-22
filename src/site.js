@@ -1,35 +1,75 @@
 import { applyAccess } from "./access-dates.mjs";
+import { applyMembership } from "./access-policy.mjs";
+import { bootAuth } from "./auth.js";
+import { signedPdfUrl, usesSignedPdf } from "./library.js";
+import { initAccountButton, initAccountPage, initContactForm, initLoginPage } from "./pages.js";
+import { sessionState } from "./session.js";
+import { initWeekly } from "./weekly.js";
 
 function initDownloads() {
   document.querySelectorAll("[data-pdf]").forEach((panel) => {
-    if (panel.hasAttribute("hidden")) return;
+    if (panel.dataset.downloadBound === "1" || panel.hasAttribute("hidden")) return;
     const pdf = panel.getAttribute("data-pdf");
     const filename = panel.getAttribute("data-filename");
     const box = panel.querySelector("[data-agree]");
     const link = panel.querySelector("[data-download]");
     if (!pdf || !filename || !box || !link) return;
+    panel.dataset.downloadBound = "1";
+    let error = panel.querySelector("[data-pdf-error]");
+    if (!error) {
+      error = document.createElement("p");
+      error.className = "form-error";
+      error.setAttribute("data-pdf-error", "");
+      error.hidden = true;
+      panel.append(error);
+    }
 
     const sync = () => {
       const agreed = box.checked;
-      if (agreed) {
+      if (agreed && !usesSignedPdf()) {
         link.href = pdf;
         link.setAttribute("download", filename);
-        link.classList.remove("is-disabled");
-        link.removeAttribute("aria-disabled");
       } else {
         link.removeAttribute("href");
         link.removeAttribute("download");
-        link.classList.add("is-disabled");
-        link.setAttribute("aria-disabled", "true");
       }
+      link.classList.toggle("is-disabled", !agreed);
+      if (agreed) link.removeAttribute("aria-disabled");
+      else link.setAttribute("aria-disabled", "true");
     };
 
     box.addEventListener("change", sync);
-    link.addEventListener("click", (event) => {
-      if (!box.checked) event.preventDefault();
+    link.addEventListener("click", async (event) => {
+      if (!box.checked) {
+        event.preventDefault();
+        return;
+      }
+      if (!usesSignedPdf()) return;
+      event.preventDefault();
+      error.hidden = true;
+      try {
+        const url = await signedPdfUrl(pdf);
+        const anchor = document.createElement("a");
+        anchor.href = url;
+        anchor.download = filename;
+        anchor.target = "_blank";
+        anchor.rel = "noopener";
+        document.body.append(anchor);
+        anchor.click();
+        anchor.remove();
+      } catch (err) {
+        error.hidden = false;
+        error.textContent = err instanceof Error ? err.message : "This PDF is not available to this account yet.";
+      }
     });
     sync();
   });
+}
+
+function refreshAccess() {
+  applyAccess(document);
+  applyMembership(document, sessionState.tier);
+  initDownloads();
 }
 
 function initMenus() {
@@ -91,3 +131,12 @@ initDownloads();
 initMenus();
 initYear();
 initHeader();
+initAccountButton();
+initLoginPage();
+initAccountPage();
+initContactForm();
+initWeekly();
+bootAuth().then(() => {
+  refreshAccess();
+  window.addEventListener("froth-session", refreshAccess);
+});

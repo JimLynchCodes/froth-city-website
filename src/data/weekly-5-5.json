@@ -1,0 +1,23 @@
+{
+  "weeks": [
+    {
+      "weekOf": "2026-11-16",
+      "example": true,
+      "label": "Example week, not a recommendation",
+      "long": [
+        {
+          "sector": "Example sector",
+          "etf": "XLE",
+          "thesis": "Placeholder only. Replace this row with a real sector before publishing."
+        }
+      ],
+      "short": [
+        {
+          "sector": "Example sector",
+          "etf": "XLU",
+          "thesis": "Placeholder only. Replace this row with a real sector before publishing."
+        }
+      ]
+    }
+  ]
+}
