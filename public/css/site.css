@@ -1276,10 +1276,11 @@ table.note caption { caption-side: bottom; padding-top: 8px; text-align: left; f
   .footnotes a, .sources a { text-decoration: underline; }
 }
 
-.bar-start {
+.bar-end {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  margin-left: auto;
   min-width: 0;
 }
 
