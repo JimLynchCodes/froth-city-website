@@ -24,8 +24,6 @@ export function initAccountButton() {
   const bar = document.querySelector(".site-header .bar");
   const brand = bar?.querySelector(".brand");
   if (!bar || !brand || bar.querySelector(".account-btn")) return;
-  const start = document.createElement("div");
-  start.className = "bar-start";
   const link = document.createElement("a");
   link.className = "account-btn";
   link.href = "/login/";
@@ -34,8 +32,14 @@ export function initAccountButton() {
     <circle cx="12" cy="8" r="3.1"></circle>
     <path d="M5.6 19.2c1.15-3.05 3.35-4.5 6.4-4.5s5.25 1.45 6.4 4.5"></path>
   </svg>`;
-  bar.insertBefore(start, brand);
-  start.append(link, brand);
+  const end = document.createElement("div");
+  end.className = "bar-end";
+  const nav = bar.querySelector(".desktop-nav");
+  const toggle = bar.querySelector(".nav-toggle");
+  if (nav) end.append(nav);
+  end.append(link);
+  if (toggle) end.append(toggle);
+  bar.append(end);
 
   const paint = () => {
     const signedIn = Boolean(sessionState.email);
